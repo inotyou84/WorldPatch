@@ -1,0 +1,4554 @@
+void PatchCombo()
+{
+
+	DWORD roomMasterAddress = *(DWORD*)OFS_ROOM_MASTER_INFO;
+
+
+	//teamsysteam();
+
+
+
+	if ((*((int*)LOCK_CAM)) == 0){
+	(*((int*)LOCK_CAM)) = 1;
+	}
+
+	//keymain(); //check VK key
+
+
+	//BUPatchMain->PatchMem(((DWORD)OFS_CNAVATAR_LIST+0x7), &HexList, 1, 0);
+	//BUPatchMain->PatchMem(((DWORD)OFS_CNAVATAR_LIST+0x7), "\x31", 1, 0);
+
+	//BUPatchMain->start();
+
+	//	if (BUPatchMain->CheckPERFECTMode()){
+
+	//	BUPatchMain->SetP(6); //set p bouns //6,7 //VTC is 5
+	//	perfect_mode = 1;
+
+	//}else{
+
+	//	BUPatchMain->SetP(5); //set p bouns //6,7 //VTC is 5
+	//	perfect_mode = 0;
+
+	//}
+
+		//// for 2 Bytes Hex
+		//unsigned short* addressmpvip = (unsigned short*)0x02E4C5A4; //VIP
+
+		// for 1 Byte Hex
+		//unsigned char* addressmp = (unsigned char*)0x01B88FD8;
+		//int maxPlayerPlay = static_cast<int>(*addressmp);
+
+		//unsigned char* addressmpr = (unsigned char*)0x02E1D43D;
+		//int maxPlayerRoom = static_cast<int>(*addressmpr);
+
+		//unsigned char* teamint1 = (unsigned char*)((roomMasterAddress + 0 * 0x738) + 0x22 + 0x30);
+		//int teamcolor1 = static_cast<int>(*teamint1);
+
+		//unsigned char* teamint2 = (unsigned char*)((roomMasterAddress + 1 * 0x738) + 0x22 + 0x30);
+		//int teamcolor2 = static_cast<int>(*teamint2);
+
+		//unsigned char* teamint3 = (unsigned char*)((roomMasterAddress + 2 * 0x738) + 0x22 + 0x30);
+		//int teamcolor3 = static_cast<int>(*teamint3);
+
+		//unsigned char* teamint4 = (unsigned char*)((roomMasterAddress + 3 * 0x738) + 0x22 + 0x30);
+		//int teamcolor4 = static_cast<int>(*teamint4);
+
+		//unsigned char* teamint5 = (unsigned char*)((roomMasterAddress + 4 * 0x738) + 0x22 + 0x30);
+		//int teamcolor5 = static_cast<int>(*teamint5);
+
+		//unsigned char* teamint6 = (unsigned char*)((roomMasterAddress + 5 * 0x738) + 0x22 + 0x30);
+		//int teamcolor6 = static_cast<int>(*teamint6);
+
+        //hexToString(card_hex, boss_hex);
+
+		//AuPos(500,500);
+		//AuDraw("maxplayer_room %d | maxplayer_play %d",maxPlayerRoom,maxPlayerPlay);
+
+		/*AuPos(50,550);
+		AuDraw("%.2f %% | %.2f %% | %.2f %% | %.2f %% | %.2f %% | %.2f %% | %.2f %% | %.2f %% | %.2f %% | %.2f %%",accuracy_score,perfect_chain_index,stability,performance_index,combo_efficiency,consistency,improvement_score,risk_reward,rhythm_mastery,endurance_score);*/
+
+		//AuPos(500,400);
+		//AuDraw("slot1_winst %d | Teamslot1 %d | score %d | score11 %d", slot1_winst,Teamslot1,score,score11);
+
+		//AuPos(500,400);
+		//AuDraw("TeamScore A %d | B %d",redTeamScore,blueTeamScore);
+
+		//AuPos(500,500);
+		//AuDraw("TeamName A %s %s %s | B %s %s %s",teamname1,teamname2,teamname3,teamname4,teamname5,teamname6);
+
+		//AuPos(400,500);
+		//AuDraw("%d",room_check);
+
+		//if (boss_mode == 1){
+
+		//AuPos(400,300);
+		//AuDraw("ping? | %.2f",test_speed);
+
+		//}else{
+
+		//AuPos(400,300);
+		//AuDraw("today%d A%d B%d DP%d",today,todayA,todayB,disconnect_point);
+
+		//}
+
+
+	
+
+	//if (BUPatchMain->CheckBOSSMode()){
+
+	//	//Boss Mode
+	//	BUPatchMain->SIBU_BOSS_MODE();
+
+	//}
+
+
+	// Team Mode
+	//BUPatchMain->TeamMode();
+
+
+
+
+
+		if (strcmp(resultSendLadder, "") == 0){
+			if (*(DWORD*)OFS_CTRLTAB == 1) (*(DWORD*)OFS_CTRLTAB) = 0; //hide ctrl2
+			if (*(DWORD*)OFS_CTRLTAB == 2) (*(DWORD*)OFS_CTRLTAB) = 0; //hide ctrl2
+			//LadderNotice = 0;
+		}else{
+			if (*(DWORD*)OFS_CTRLTAB == 1) (*(DWORD*)OFS_CTRLTAB) = 2; //hide ctrl2
+		}
+
+
+
+
+
+
+
+
+
+
+
+		//AuPos(300,220);
+		//AuDraw("%s", ((roomMasterAddress + 1 * 0x738) + 0x22)); //slot 2 auid
+		//AuPos(300,240);
+		//AuDraw("%s", ((roomMasterAddress + 2 * 0x738) + 0x22)); //slot 3 auid
+		//AuPos(300,260);
+		//AuDraw("%s", ((roomMasterAddress + 3 * 0x738) + 0x22)); //slot 4 auid
+		//AuPos(300,280);
+		//AuDraw("%s", ((roomMasterAddress + 4 * 0x738) + 0x22)); //slot 5 auid
+		//AuPos(300,300);
+		//AuDraw("%s", ((roomMasterAddress + 5 * 0x738) + 0x22)); //slot 6 auid
+
+		//AuPos(300,300);
+		//AuDraw("%d %d %d %d %d %d", score11,score22,score33,score44,score55,score66);
+
+		//AuPos(300,400);
+		//AuDraw("%s %s %s %s %s %s", GetName_1,GetName_2,GetName_3,GetName_4,GetName_5,GetName_6);
+
+		//AuPos(300,150);
+		//AuDraw("%d", max_player_new_play);
+
+
+
+	//check param
+    //SYSTEM_INFO sysinfo;
+    //GetSystemInfo(&sysinfo);
+    //std::cout << "param: " << sysinfo.dwNumberOfProcessors << std::endl;
+
+
+
+
+
+	// just run 1
+		if (nation_bool == true){
+
+		//titleG();
+
+		get_nation_name(nation, sizeof(nation));
+		//generateRandomKey();
+		
+		//int total_files = 348;
+		int total_files = 1;
+		for (int i = 0; i < total_files; ++i) {
+		generateNextFile(); //for key all
+}
+
+		nation_bool = false;
+		}
+
+		//CheckObsProcessIfNeeded();
+
+				// NKRO KEY TEST
+				//		BYTE  diKeys[256] = { 0 };
+
+				////if (diKeys[DIK_NUMPAD1] & 0x80) {if (NUMPAD1_PRESSED){timer[0] = 1;NUMPAD1_PRESSED = false;}}else{NUMPAD1_PRESSED = true;}
+				////if (diKeys[DIK_NUMPAD4] & 0x80) {if (NUMPAD4_PRESSED){timer[1] = 1;NUMPAD4_PRESSED = false;}}else{NUMPAD4_PRESSED = true;}
+				////if (diKeys[DIK_NUMPAD7] & 0x80) {if (NUMPAD7_PRESSED){timer[2] = 1;NUMPAD7_PRESSED = false;}}else{NUMPAD7_PRESSED = true;}
+				////if (diKeys[DIK_NUMPAD9] & 0x80) {if (NUMPAD9_PRESSED){timer[3] = 1;NUMPAD9_PRESSED = false;}}else{NUMPAD9_PRESSED = true;}
+				////if (diKeys[DIK_NUMPAD6] & 0x80) {if (NUMPAD6_PRESSED){timer[4] = 1;NUMPAD6_PRESSED = false;}}else{NUMPAD6_PRESSED = true;}
+				////if (diKeys[DIK_NUMPAD3] & 0x80) {if (NUMPAD3_PRESSED){timer[5] = 1;NUMPAD3_PRESSED = false;}}else{NUMPAD3_PRESSED = true;}
+
+				////if (diKeys[DIK_NUMPAD5] & 0x80) {if (NUMPAD5_PRESSED){timer[6] = 1;NUMPAD5_PRESSED = false;}}else{NUMPAD5_PRESSED = true;}
+				////if (diKeys[DIK_NUMPAD0] & 0x80) {if (NUMPAD0_PRESSED){timer[7] = 1;NUMPAD0_PRESSED = false;}}else{NUMPAD0_PRESSED = true;}
+
+				////if (diKeys[DIK_HOME] & 0x80) {if (HOME_PRESSED){timer[8] = 1;HOME_PRESSED = false;}}else{HOME_PRESSED = true;}
+				////if (diKeys[DIK_LEFT] & 0x80) {if (LEFT_PRESSED){timer[9] = 1;LEFT_PRESSED = false;}}else{LEFT_PRESSED = true;}
+				////if (diKeys[DIK_END] & 0x80) {if  (END_PRESSED){timer[10] = 1;END_PRESSED = false;}}else{END_PRESSED = true;}
+				////if (diKeys[DIK_PRIOR] & 0x80) {if (PGUP_PRESSED){timer[11] = 1;PGUP_PRESSED = false;}}else{PGUP_PRESSED = true;}
+				////if (diKeys[DIK_RIGHT] & 0x80) {if (RIGHT_PRESSED){timer[12] = 1;RIGHT_PRESSED = false;}}else{RIGHT_PRESSED = true;}
+				////if (diKeys[DIK_NEXT] & 0x80) {if (PGDN_PRESSED){timer[13] = 1;PGDN_PRESSED = false;}}else{PGDN_PRESSED = true;}
+
+				//    BYTE dikCodes[] = {0x47, 0x4F, 0x4B, 0x4D, 0x49, 0x51};
+				//	int count = sizeof(dikCodes)/sizeof(BYTE);
+
+				//	for (int i = 0; i < count; ++i) {
+				//		BYTE dikCode = dikCodes[i];
+
+				//		UINT vkCode = DIkToVk(dikCode);
+				//		if (vkCode != 0) {
+				//			SHORT state = GetAsyncKeyState(vkCode);
+				//			if ((GetAsyncKeyState(VK_HOME) & 0x8000) != 0) {
+
+				//				if (HOME_PRESSED){timer[8] = 1;HOME_PRESSED = false;}}else{HOME_PRESSED = true;}
+
+				//			if ((GetAsyncKeyState(VK_END) & 0x8000) != 0) {
+
+				//				if  (END_PRESSED){timer[10] = 1;END_PRESSED = false;}}else{END_PRESSED = true;}
+
+				//			if ((GetAsyncKeyState(VK_LEFT) & 0x8000) != 0) {
+
+				//				if (LEFT_PRESSED){timer[9] = 1;LEFT_PRESSED = false;}}else{LEFT_PRESSED = true;}
+
+				//			if ((GetAsyncKeyState(VK_RIGHT) & 0x8000) != 0) {
+
+				//				if (RIGHT_PRESSED){timer[12] = 1;RIGHT_PRESSED = false;}}else{RIGHT_PRESSED = true;}
+
+				//			if ((GetAsyncKeyState(VK_PRIOR) & 0x8000) != 0) {
+
+				//				if (PGUP_PRESSED){timer[11] = 1;PGUP_PRESSED = false;}}else{PGUP_PRESSED = true;}
+
+				//			if ((GetAsyncKeyState(VK_NEXT) & 0x8000) != 0) {
+
+				//				if (PGDN_PRESSED){timer[13] = 1;PGDN_PRESSED = false;}}else{PGDN_PRESSED = true;}
+
+				//		}
+				//	}
+
+		//BUPatchMain->NewKeyboard();
+
+		/*AuPos(300,300);
+		AuDraw("%d", teamcolor);*/
+
+		//AuPos(300,400);
+		//AuDraw("numpad %d %d %d %d %d %d", numpad_press[8],numpad_press[9],numpad_press[10],numpad_press[11],numpad_press[12],numpad_press[13]);
+
+
+	//if (bShowInfo == 0) bShowInfo = 1;
+
+	//if (vip_room == 1){ //vip_mode
+	//*addressmpvip = 9999;
+	//}
+
+	//if ((*((int*)BLACK_MAP)) == 1) (*((int*)BLACK_MAP)) = 0;
+	//if ((*((int*)LOCK_CAM)) == 0) (*((int*)LOCK_CAM)) = 1;
+	//if ((*((int*)MOUSE_EFF)) == 1) (*((int*)MOUSE_EFF)) = 0;
+	//if (*(DWORD*)OFS_CTRLTAB == 1) (*(DWORD*)OFS_CTRLTAB) = 2; //hide ctrl2
+	//if (*(DWORD*)OFS_CTRLTAB == 1) (*(DWORD*)OFS_CTRLTAB) = 0;
+	//if (*(DWORD*)OFS_CTRLTAB == 2) (*(DWORD*)OFS_CTRLTAB) = 0;
+
+	//if (strncmp((char *)OFS_CHARACTER_NAME, "SIBU", strlen("SIBU")) != 0){
+
+	if (*(DWORD *)OFS_ROOM_STATUS == OUTROOM){
+	(*((int*)MODE_LOCK)) = 64;
+	if ((*((int*)ROOM_CREATE)) == 1) {
+		if (room_check == 0){
+    strcpy((char*)CHAT_IN, ";comp WORLD PATCH™ : EX   [v3.2]");
+		room_check = 1;
+		}
+
+	}
+
+	if ((*((int*)ROOM_CREATE)) == 0) {
+		room_check = 0;
+	}
+
+	}
+
+	//}
+
+
+	//BUPatchMain->RealPlayer();
+
+	//BUPatchMain->D2V();
+
+	//BUPatchMain->realscore2025();
+
+	//LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+
+			if (*(DWORD*)OFS_ROOM_STATUS == INROOM){ //888+
+
+
+			//if (vipcheck == 0){
+			//	if (vip_room == 1){
+
+			//BUPatchMain->SendChat("VIP_MODE maintenance. (wait SIBU fix)");
+			//vipcheck = 1;
+
+			//	}
+			//}
+
+			//if (vipcheck == 1){
+			//	if (vip_room == 0){
+
+			//BUPatchMain->SendChat("VIP_MODE maintenance. (wait SIBU fix)");
+			//vipcheck = 0;
+
+			//	}
+			//}
+
+		//if (strncmp((char *)OFS_AUDITION_CHAT, "/vip_on", strlen("/vip_on")) == 0)
+		//{
+		//	vip_room = 1;
+		//	BUPatchMain->SendChat("VIP_ROOM_SKIN : ON");
+		//}
+
+		//if (strncmp((char *)OFS_AUDITION_CHAT, "/vip_off", strlen("/vip_off")) == 0)
+		//{
+		//	vip_room = 0;
+		//	BUPatchMain->SendChat("VIP_ROOM_SKIN : OFF");
+		//}
+
+				//BUPatchMain->player_number();
+
+				//BUPatchMain->V2D();
+
+
+		//if ((*((int*)SONGLIST_STATE)) == 0){
+
+	
+		//		if (maxPlayers == 1){
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 272);
+		//AuDDS("playerno");
+
+		//AuPos(50, 271);
+		//AuDraw("1 Player [No Bonus]");
+
+		//	}
+
+		//	if (maxPlayers == 2){
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 272);
+		//AuDDS("playerb");
+
+		//AuPos(50, 271);
+		//AuDraw("2 Player Bouns [+1RP]");
+
+		//	}
+
+		//	if (maxPlayers == 3){
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 272);
+		//AuDDS("playerb");
+
+		//AuPos(50, 271);
+		//AuDraw("3 Player Bouns [+2RP]");
+
+		//	}
+
+		//	if (maxPlayers == 4){
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 272);
+		//AuDDS("playerb");
+
+		//AuPos(50, 271);
+		//AuDraw("4 Player Bouns [+3RP]");
+
+		//	}
+
+		//	if (maxPlayers == 5){
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 272);
+		//AuDDS("playerb");
+
+		//AuPos(50, 271);
+		//AuDraw("5 Player Bouns [+4RP]");
+
+		//	}
+
+		//	if (maxPlayers == 6){
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 272);
+		//AuDDS("playerb");
+
+		//AuPos(50, 271);
+		//AuDraw("6 Player Bouns [+5RP]");
+
+		//	}
+
+		//}
+
+
+
+	//if (support_sibu_1 == 1){
+
+	//		AuPath("TEXTURE/hud/BeatUp");
+	//		AuPos(490, 550);AuDDS("sp1");
+
+	//		}
+
+
+	//		if (support_sibu_1 == 2){
+
+	//		AuPath("TEXTURE/hud/BeatUp");
+	//		AuPos(490, 550);AuDDS("sp2");
+
+	//		}
+
+
+
+
+
+
+
+
+		if (skin == 0){
+
+		if (skincheck == 4){
+
+		BUPatchMain->SendChat("Change BeatUp_SKIN [Original VTC]");
+
+		skincheck = 0;
+
+		}
+		}
+
+
+
+		if (skin == 1){
+
+		if (skincheck == 0){
+
+		BUPatchMain->SendChat("Change BeatUp_SKIN [Future | by:SIBU]");
+
+		skincheck = 1;
+
+		}
+		}
+
+
+		
+		if (skin == 2){
+
+		if (skincheck == 1){
+
+		BUPatchMain->SendChat("Change BeatUp_SKIN [Original Black | by:SIBU]");
+
+		skincheck = 2;
+
+		}
+		}
+
+
+
+		if (skin == 3){
+
+		if (skincheck == 2){
+
+		BUPatchMain->SendChat("Change BeatUp_SKIN [Smile=) | by:SIBU]");
+
+		skincheck = 3;
+
+		}
+		}
+
+
+
+		if (skin == 4){
+
+		if (skincheck == 3){
+
+		BUPatchMain->SendChat("Change BeatUp_SKIN [Citta | by:Etanol]");
+
+		skincheck = 4;
+
+		}
+		}
+
+
+
+
+
+		if (support_sibu_1 == 1){
+
+		AuPath("TEXTURE/hud/BeatUp");
+		AuPos(490, 570);AuDDS("new_sp1");
+
+		}
+
+		if (support_sibu_1 == 2){
+
+		AuPath("TEXTURE/hud/BeatUp");
+		AuPos(490, 570);AuDDS("new_sp2");
+
+		}
+
+		if (support_sibu_1 == 3){
+
+		AuPath("TEXTURE/hud/BeatUp");
+		AuPos(490, 570);AuDDS("new_sp3");
+
+		}
+
+		if (support_sibu_1 == 4){
+
+		AuPath("TEXTURE/hud/BeatUp");
+		AuPos(490, 570);AuDDS("new_sp4");
+
+		}
+
+		if (support_sibu_1 == 5){
+
+		AuPath("TEXTURE/hud/BeatUp");
+		AuPos(490, 570);AuDDS("new_sp5");
+
+		}
+
+
+
+
+
+	//if (LB==1){
+
+
+	//AuPath("TEXTURE/hud/BeatUp");
+	//AuPos(200, 100);//700x595
+	//AuDDS("ladderboard");
+
+	////name
+	//AuPos(pos_x+10, pos_y);
+	//AuDraw(szCharacterName[0]);
+	//AuPos(pos_x+10, pos_y+20);
+	//AuDraw(szCharacterName[1]);
+	//AuPos(pos_x+10, pos_y+40);
+	//AuDraw(szCharacterName[2]);
+	//AuPos(pos_x+10, pos_y+60);
+	//AuDraw(szCharacterName[3]);
+	//AuPos(pos_x+10, pos_y+80);
+	//AuDraw(szCharacterName[4]);
+	//AuPos(pos_x+10, pos_y+100);
+	//AuDraw(szCharacterName[5]);
+	//AuPos(pos_x+10, pos_y+120);
+	//AuDraw(szCharacterName[6]);
+	//AuPos(pos_x+10, pos_y+140);
+	//AuDraw(szCharacterName[7]);
+	//AuPos(pos_x+10, pos_y+160);
+	//AuDraw(szCharacterName[8]);
+	//AuPos(pos_x+10, pos_y+180);
+	//AuDraw(szCharacterName[9]);
+
+	////key num
+	//AuPos(pos_x+250, pos_y);
+	//AuDraw(szKeyboardNumber[0]);
+	//AuPos(pos_x+250, pos_y+20);
+	//AuDraw(szKeyboardNumber[1]);
+	//AuPos(pos_x+250, pos_y+40);
+	//AuDraw(szKeyboardNumber[2]);
+	//AuPos(pos_x+250, pos_y+60);
+	//AuDraw(szKeyboardNumber[3]);
+	//AuPos(pos_x+250, pos_y+80);
+	//AuDraw(szKeyboardNumber[4]);
+	//AuPos(pos_x+250, pos_y+100);
+	//AuDraw(szKeyboardNumber[5]);
+	//AuPos(pos_x+250, pos_y+120);
+	//AuDraw(szKeyboardNumber[6]);
+	//AuPos(pos_x+250, pos_y+140);
+	//AuDraw(szKeyboardNumber[7]);
+	//AuPos(pos_x+250, pos_y+160);
+	//AuDraw(szKeyboardNumber[8]);
+	//AuPos(pos_x+250, pos_y+180);
+	//AuDraw(szKeyboardNumber[9]);
+
+	//}
+
+
+				if (strncmp((char *)OFS_CHARACTER_NAME, "SIBU", strlen("SIBU")) == 0){
+
+			if (strncmp((char *)OFS_AUDITION_CHAT, "/+rp", strlen("/+rp")) == 0)
+		{
+			rank_point += 1;
+		}
+
+			if (strncmp((char *)OFS_AUDITION_CHAT, "/-rp", strlen("/-rp")) == 0)
+		{
+			rank_point -= 1;
+		}
+
+		//	if (strncmp((char *)OFS_AUDITION_CHAT, "/+exp", strlen("/+exp")) == 0)
+		//{
+		//	total_judg += 0.5;
+		//}
+
+		//	if (strncmp((char *)OFS_AUDITION_CHAT, "/+expx10", strlen("/+expx10")) == 0)
+		//{
+		//	total_judg += 5;
+		//}
+
+		//	if (strncmp((char *)OFS_AUDITION_CHAT, "/+expx100", strlen("/+expx100")) == 0)
+		//{
+		//	total_judg += 50;
+		//}
+
+		//	if (strncmp((char *)OFS_AUDITION_CHAT, "/+expx1000", strlen("/+expx1000")) == 0)
+		//{
+		//	total_judg += 500;
+		//}
+
+		//	if (strncmp((char *)OFS_AUDITION_CHAT, "/-exp", strlen("/-exp")) == 0)
+		//{
+		//	total_judg -= 0.5;
+		//}
+
+		//	if (strncmp((char *)OFS_AUDITION_CHAT, "/-expx10", strlen("/-expx10")) == 0)
+		//{
+		//	total_judg -= 5;
+		//}
+
+		//	if (strncmp((char *)OFS_AUDITION_CHAT, "/-expx100", strlen("/-expx100")) == 0)
+		//{
+		//	total_judg -= 50;
+		//}
+
+		//	if (strncmp((char *)OFS_AUDITION_CHAT, "/-expx1000", strlen("/-expx1000")) == 0)
+		//{
+		//	total_judg -= 500;
+		//}
+
+					}
+
+
+		//AuPos(300,300);
+		//AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)total_p_perfect %.2f %%", total_p_perfect);
+
+		//AuPos(300,400);
+		//AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)total_round %d", total_round);
+
+		//AuPos(300,500);
+		//AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)total_p_perfect2 %.2f %%", total_p_perfect2);
+
+			//if (shiftInfo == 1){
+
+
+			//	BUPatchMain->getrankpoint((char *)OFS_ACCOUNT_AUDITION);
+
+			//	BUPatchMain->getranklist();
+
+			if (shiftInfo == 2) {
+
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(939,300);
+		//AuDDS("shiftoff2");
+
+		//AuPos(825,300);
+		//AuDraw("[Perfect Ladder]");
+
+		//AuPos(825,320);
+		//AuDraw("TOP1:  %s",perfect_top1_name);
+		//AuPos(825,340);
+		//AuDraw("TOP2:  %s",perfect_top2_name);
+		//AuPos(825,360);
+		//AuDraw("TOP3:  %s",perfect_top3_name);
+		//AuPos(825,380);
+		//AuDraw("TOP4:  %s",perfect_top4_name);
+		//AuPos(825,400);
+		//AuDraw("TOP5:  %s",perfect_top5_name);
+		//AuPos(825,420);
+		//AuDraw("TOP6:  %s",perfect_top6_name);
+		//AuPos(825,440);
+		//AuDraw("TOP7:  %s",perfect_top7_name);
+		//AuPos(825,460);
+		//AuDraw("TOP8:  %s",perfect_top8_name);
+		//AuPos(825,480);
+		//AuDraw("TOP9:  %s",perfect_top9_name);
+		//AuPos(825,500);
+		//AuDraw("TOP10:  %s",perfect_top10_name);
+
+	
+		//AuPos(960,320);
+		//AuDraw("[%.2f %%]",perfect_top1_point);
+		//AuPos(960,340);
+		//AuDraw("[%.2f %%]",perfect_top2_point);
+		//AuPos(960,360);
+		//AuDraw("[%.2f %%]",perfect_top3_point);
+		//AuPos(960,380);
+		//AuDraw("[%.2f %%]",perfect_top4_point);
+		//AuPos(960,400);
+		//AuDraw("[%.2f %%]",perfect_top5_point);
+		//AuPos(960,420);
+		//AuDraw("[%.2f %%]",perfect_top6_point);
+		//AuPos(960,440);
+		//AuDraw("[%.2f %%]",perfect_top7_point);
+		//AuPos(960,460);
+		//AuDraw("[%.2f %%]",perfect_top8_point);
+		//AuPos(960,480);
+		//AuDraw("[%.2f %%]",perfect_top9_point);
+		//AuPos(960,500);
+		//AuDraw("[%.2f %%]",perfect_top10_point);
+
+		}
+
+
+		if (shiftInfo == 3) {
+
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(939,300);
+		//AuDDS("shiftoff2");
+
+		//AuPos(825,300);
+		//AuDraw("[Combo Ladder]");
+
+		//AuPos(825,320);
+		//AuDraw("TOP1:  %s",combo_top1_name);
+		//AuPos(825,340);
+		//AuDraw("TOP2:  %s",combo_top2_name);
+		//AuPos(825,360);
+		//AuDraw("TOP3:  %s",combo_top3_name);
+		//AuPos(825,380);
+		//AuDraw("TOP4:  %s",combo_top4_name);
+		//AuPos(825,400);
+		//AuDraw("TOP5:  %s",combo_top5_name);
+		//AuPos(825,420);
+		//AuDraw("TOP6:  %s",combo_top6_name);
+		//AuPos(825,440);
+		//AuDraw("TOP7:  %s",combo_top7_name);
+		//AuPos(825,460);
+		//AuDraw("TOP8:  %s",combo_top8_name);
+		//AuPos(825,480);
+		//AuDraw("TOP9:  %s",combo_top9_name);
+		//AuPos(825,500);
+		//AuDraw("TOP10:  %s",combo_top10_name);
+
+	
+		//AuPos(960,320);
+		//AuDraw("[%.2f %%]",combo_top1_point);
+		//AuPos(960,340);
+		//AuDraw("[%.2f %%]",combo_top2_point);
+		//AuPos(960,360);
+		//AuDraw("[%.2f %%]",combo_top3_point);
+		//AuPos(960,380);
+		//AuDraw("[%.2f %%]",combo_top4_point);
+		//AuPos(960,400);
+		//AuDraw("[%.2f %%]",combo_top5_point);
+		//AuPos(960,420);
+		//AuDraw("[%.2f %%]",combo_top6_point);
+		//AuPos(960,440);
+		//AuDraw("[%.2f %%]",combo_top7_point);
+		//AuPos(960,460);
+		//AuDraw("[%.2f %%]",combo_top8_point);
+		//AuPos(960,480);
+		//AuDraw("[%.2f %%]",combo_top9_point);
+		//AuPos(960,500);
+		//AuDraw("[%.2f %%]",combo_top10_point);
+
+		}
+
+
+		if (shiftInfo == 1) {
+
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(939,300);
+		//AuDDS("shiftoff2");
+
+		//AuPos(825,300);
+		//AuDraw("[Judg Ladder]");
+
+		//AuPos(825,320);
+		//AuDraw("TOP1:  %s",judg_top1_name);
+		//AuPos(825,340);
+		//AuDraw("TOP2:  %s",judg_top2_name);
+		//AuPos(825,360);
+		//AuDraw("TOP3:  %s",judg_top3_name);
+		//AuPos(825,380);
+		//AuDraw("TOP4:  %s",judg_top4_name);
+		//AuPos(825,400);
+		//AuDraw("TOP5:  %s",judg_top5_name);
+		//AuPos(825,420);
+		//AuDraw("TOP6:  %s",judg_top6_name);
+		//AuPos(825,440);
+		//AuDraw("TOP7:  %s",judg_top7_name);
+		//AuPos(825,460);
+		//AuDraw("TOP8:  %s",judg_top8_name);
+		//AuPos(825,480);
+		//AuDraw("TOP9:  %s",judg_top9_name);
+		//AuPos(825,500);
+		//AuDraw("TOP10:  %s",judg_top10_name);
+
+	
+		//AuPos(960,320);
+		//AuDraw("[%.2f %%]",judg_top1_point);
+		//AuPos(960,340);
+		//AuDraw("[%.2f %%]",judg_top2_point);
+		//AuPos(960,360);
+		//AuDraw("[%.2f %%]",judg_top3_point);
+		//AuPos(960,380);
+		//AuDraw("[%.2f %%]",judg_top4_point);
+		//AuPos(960,400);
+		//AuDraw("[%.2f %%]",judg_top5_point);
+		//AuPos(960,420);
+		//AuDraw("[%.2f %%]",judg_top6_point);
+		//AuPos(960,440);
+		//AuDraw("[%.2f %%]",judg_top7_point);
+		//AuPos(960,460);
+		//AuDraw("[%.2f %%]",judg_top8_point);
+		//AuPos(960,480);
+		//AuDraw("[%.2f %%]",judg_top9_point);
+		//AuPos(960,500);
+		//AuDraw("[%.2f %%]",judg_top10_point);
+
+		}
+
+
+		if (shiftInfo == 0) {
+
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(939,300);
+		//AuDDS("shiftoff2");
+
+		AuPos(865+g_fixwinsize_x,50);
+		AuDraw("[Rank Ladder TOP25]");
+
+		AuPos(845+g_fixwinsize_x,70);
+		AuDraw("TOP1:  %s",rank_top1_name);
+		AuPos(845+g_fixwinsize_x,88);
+		AuDraw("TOP2:  %s",rank_top2_name);
+		AuPos(845+g_fixwinsize_x,106);
+		AuDraw("TOP3:  %s",rank_top3_name);
+		AuPos(845+g_fixwinsize_x,124);
+		AuDraw("TOP4:  %s",rank_top4_name);
+		AuPos(845+g_fixwinsize_x,142);
+		AuDraw("TOP5:  %s",rank_top5_name);
+		AuPos(845+g_fixwinsize_x,160);
+		AuDraw("TOP6:  %s",rank_top6_name);
+		AuPos(845+g_fixwinsize_x,178);
+		AuDraw("TOP7:  %s",rank_top7_name);
+		AuPos(845+g_fixwinsize_x,196);
+		AuDraw("TOP8:  %s",rank_top8_name);
+		AuPos(845+g_fixwinsize_x,214);
+		AuDraw("TOP9:  %s",rank_top9_name);
+		AuPos(845+g_fixwinsize_x,232);
+		AuDraw("TOP10: %s",rank_top10_name);
+		AuPos(845+g_fixwinsize_x,250);
+		AuDraw("TOP11: %s",rank_top11_name);
+		AuPos(845+g_fixwinsize_x,268);
+		AuDraw("TOP12: %s",rank_top12_name);
+		AuPos(845+g_fixwinsize_x,286);
+		AuDraw("TOP13: %s",rank_top13_name);
+		AuPos(845+g_fixwinsize_x,304);
+		AuDraw("TOP14: %s",rank_top14_name);
+		AuPos(845+g_fixwinsize_x,322);
+		AuDraw("TOP15: %s",rank_top15_name);
+		AuPos(845+g_fixwinsize_x,340);
+		AuDraw("TOP16: %s",rank_top16_name);
+		AuPos(845+g_fixwinsize_x,358);
+		AuDraw("TOP17: %s",rank_top17_name);
+		AuPos(845+g_fixwinsize_x,376);
+		AuDraw("TOP18: %s",rank_top18_name);
+		AuPos(845+g_fixwinsize_x,394);
+		AuDraw("TOP19: %s",rank_top19_name);
+		AuPos(845+g_fixwinsize_x,412);
+		AuDraw("TOP20: %s",rank_top20_name);
+		AuPos(845+g_fixwinsize_x,430);
+		AuDraw("TOP21: %s",rank_top21_name);
+		AuPos(845+g_fixwinsize_x,448);
+		AuDraw("TOP22: %s",rank_top22_name);
+		AuPos(845+g_fixwinsize_x,466);
+		AuDraw("TOP23: %s",rank_top23_name);
+		AuPos(845+g_fixwinsize_x,484);
+		AuDraw("TOP24: %s",rank_top24_name);
+		AuPos(845+g_fixwinsize_x,502);
+		AuDraw("TOP25: %s",rank_top25_name);
+
+		AuPos(980+g_fixwinsize_x,70);
+		AuDraw("[%d]",rank_top1_point);
+		AuPos(980+g_fixwinsize_x,88);
+		AuDraw("[%d]",rank_top2_point);
+		AuPos(980+g_fixwinsize_x,106);
+		AuDraw("[%d]",rank_top3_point);
+		AuPos(980+g_fixwinsize_x,124);
+		AuDraw("[%d]",rank_top4_point);
+		AuPos(980+g_fixwinsize_x,142);
+		AuDraw("[%d]",rank_top5_point);
+		AuPos(980+g_fixwinsize_x,160);
+		AuDraw("[%d]",rank_top6_point);
+		AuPos(980+g_fixwinsize_x,178);
+		AuDraw("[%d]",rank_top7_point);
+		AuPos(980+g_fixwinsize_x,196);
+		AuDraw("[%d]",rank_top8_point);
+		AuPos(980+g_fixwinsize_x,214);
+		AuDraw("[%d]",rank_top9_point);
+		AuPos(980+g_fixwinsize_x,232);
+		AuDraw("[%d]",rank_top10_point);
+		AuPos(980+g_fixwinsize_x,250);
+		AuDraw("[%d]",rank_top11_point);
+		AuPos(980+g_fixwinsize_x,268);
+		AuDraw("[%d]",rank_top12_point);
+		AuPos(980+g_fixwinsize_x,286);
+		AuDraw("[%d]",rank_top13_point);
+		AuPos(980+g_fixwinsize_x,304);
+		AuDraw("[%d]",rank_top14_point);
+		AuPos(980+g_fixwinsize_x,322);
+		AuDraw("[%d]",rank_top15_point);
+		AuPos(980+g_fixwinsize_x,340);
+		AuDraw("[%d]",rank_top16_point);
+		AuPos(980+g_fixwinsize_x,358);
+		AuDraw("[%d]",rank_top17_point);
+		AuPos(980+g_fixwinsize_x,376);
+		AuDraw("[%d]",rank_top18_point);
+		AuPos(980+g_fixwinsize_x,394);
+		AuDraw("[%d]",rank_top19_point);
+		AuPos(980+g_fixwinsize_x,412);
+		AuDraw("[%d]",rank_top20_point);
+		AuPos(980+g_fixwinsize_x,430);
+		AuDraw("[%d]",rank_top21_point);
+		AuPos(980+g_fixwinsize_x,448);
+		AuDraw("[%d]",rank_top22_point);
+		AuPos(980+g_fixwinsize_x,466);
+		AuDraw("[%d]",rank_top23_point);
+		AuPos(980+g_fixwinsize_x,484);
+		AuDraw("[%d]",rank_top24_point);
+		AuPos(980+g_fixwinsize_x,502);
+		AuDraw("[%d]",rank_top25_point);
+
+
+
+
+
+		// 第一段：-100 到 100 分，显示 b_list
+		if (rank_top1_point >= -100 && rank_top1_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,71);
+			AuDDS("b_list");
+		}
+		if (rank_top2_point >= -100 && rank_top2_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,89);
+			AuDDS("b_list");
+		}
+		if (rank_top3_point >= -100 && rank_top3_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,107);
+			AuDDS("b_list");
+		}
+		if (rank_top4_point >= -100 && rank_top4_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,125);
+			AuDDS("b_list");
+		}
+		if (rank_top5_point >= -100 && rank_top5_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,143);
+			AuDDS("b_list");
+		}
+		if (rank_top6_point >= -100 && rank_top6_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,161);
+			AuDDS("b_list");
+		}
+		if (rank_top7_point >= -100 && rank_top7_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,179);
+			AuDDS("b_list");
+		}
+		if (rank_top8_point >= -100 && rank_top8_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,197);
+			AuDDS("b_list");
+		}
+		if (rank_top9_point >= -100 && rank_top9_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,215);
+			AuDDS("b_list");
+		}
+		if (rank_top10_point >= -100 && rank_top10_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,233);
+			AuDDS("b_list");
+		}
+		if (rank_top11_point >= -100 && rank_top11_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,251);
+			AuDDS("b_list");
+		}
+		if (rank_top12_point >= -100 && rank_top12_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,269);
+			AuDDS("b_list");
+		}
+		if (rank_top13_point >= -100 && rank_top13_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,287);
+			AuDDS("b_list");
+		}
+		if (rank_top14_point >= -100 && rank_top14_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,305);
+			AuDDS("b_list");
+		}
+		if (rank_top15_point >= -100 && rank_top15_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,323);
+			AuDDS("b_list");
+		}
+		if (rank_top16_point >= -100 && rank_top16_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,341);
+			AuDDS("b_list");
+		}
+		if (rank_top17_point >= -100 && rank_top17_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,359);
+			AuDDS("b_list");
+		}
+		if (rank_top18_point >= -100 && rank_top18_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,377);
+			AuDDS("b_list");
+		}
+		if (rank_top19_point >= -100 && rank_top19_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,395);
+			AuDDS("b_list");
+		}
+		if (rank_top20_point >= -100 && rank_top20_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,413);
+			AuDDS("b_list");
+		}
+		if (rank_top21_point >= -100 && rank_top21_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,431);
+			AuDDS("b_list");
+		}
+		if (rank_top22_point >= -100 && rank_top22_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,449);
+			AuDDS("b_list");
+		}
+		if (rank_top23_point >= -100 && rank_top23_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,467);
+			AuDDS("b_list");
+		}
+		if (rank_top24_point >= -100 && rank_top24_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,485);
+			AuDDS("b_list");
+		}
+		if (rank_top25_point >= -100 && rank_top25_point <= 100) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,503);
+			AuDDS("b_list");
+		}
+
+		// 第二段：101 到 200 分，显示 s_list
+		if (rank_top1_point >= 101 && rank_top1_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,71);
+			AuDDS("s_list");
+		}
+		if (rank_top2_point >= 101 && rank_top2_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,89);
+			AuDDS("s_list");
+		}
+		if (rank_top3_point >= 101 && rank_top3_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,107);
+			AuDDS("s_list");
+		}
+		if (rank_top4_point >= 101 && rank_top4_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,125);
+			AuDDS("s_list");
+		}
+		if (rank_top5_point >= 101 && rank_top5_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,143);
+			AuDDS("s_list");
+		}
+		if (rank_top6_point >= 101 && rank_top6_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,161);
+			AuDDS("s_list");
+		}
+		if (rank_top7_point >= 101 && rank_top7_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,179);
+			AuDDS("s_list");
+		}
+		if (rank_top8_point >= 101 && rank_top8_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,197);
+			AuDDS("s_list");
+		}
+		if (rank_top9_point >= 101 && rank_top9_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,215);
+			AuDDS("s_list");
+		}
+		if (rank_top10_point >= 101 && rank_top10_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,233);
+			AuDDS("s_list");
+		}
+		if (rank_top11_point >= 101 && rank_top11_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,251);
+			AuDDS("s_list");
+		}
+		if (rank_top12_point >= 101 && rank_top12_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,269);
+			AuDDS("s_list");
+		}
+		if (rank_top13_point >= 101 && rank_top13_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,287);
+			AuDDS("s_list");
+		}
+		if (rank_top14_point >= 101 && rank_top14_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,305);
+			AuDDS("s_list");
+		}
+		if (rank_top15_point >= 101 && rank_top15_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,323);
+			AuDDS("s_list");
+		}
+		if (rank_top16_point >= 101 && rank_top16_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,341);
+			AuDDS("s_list");
+		}
+		if (rank_top17_point >= 101 && rank_top17_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,359);
+			AuDDS("s_list");
+		}
+		if (rank_top18_point >= 101 && rank_top18_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,377);
+			AuDDS("s_list");
+		}
+		if (rank_top19_point >= 101 && rank_top19_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,395);
+			AuDDS("s_list");
+		}
+		if (rank_top20_point >= 101 && rank_top20_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,413);
+			AuDDS("s_list");
+		}
+		if (rank_top21_point >= 101 && rank_top21_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,431);
+			AuDDS("s_list");
+		}
+		if (rank_top22_point >= 101 && rank_top22_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,449);
+			AuDDS("s_list");
+		}
+		if (rank_top23_point >= 101 && rank_top23_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,467);
+			AuDDS("s_list");
+		}
+		if (rank_top24_point >= 101 && rank_top24_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,485);
+			AuDDS("s_list");
+		}
+		if (rank_top25_point >= 101 && rank_top25_point <= 200) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,503);
+			AuDDS("s_list");
+		}
+
+		// 第三段：201 到 300 分，显示 g_list
+		if (rank_top1_point >= 201 && rank_top1_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,71);
+			AuDDS("g_list");
+		}
+		if (rank_top2_point >= 201 && rank_top2_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,89);
+			AuDDS("g_list");
+		}
+		if (rank_top3_point >= 201 && rank_top3_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,107);
+			AuDDS("g_list");
+		}
+		if (rank_top4_point >= 201 && rank_top4_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,125);
+			AuDDS("g_list");
+		}
+		if (rank_top5_point >= 201 && rank_top5_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,143);
+			AuDDS("g_list");
+		}
+		if (rank_top6_point >= 201 && rank_top6_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,161);
+			AuDDS("g_list");
+		}
+		if (rank_top7_point >= 201 && rank_top7_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,179);
+			AuDDS("g_list");
+		}
+		if (rank_top8_point >= 201 && rank_top8_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,197);
+			AuDDS("g_list");
+		}
+		if (rank_top9_point >= 201 && rank_top9_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,215);
+			AuDDS("g_list");
+		}
+		if (rank_top10_point >= 201 && rank_top10_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,233);
+			AuDDS("g_list");
+		}
+		if (rank_top11_point >= 201 && rank_top11_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,251);
+			AuDDS("g_list");
+		}
+		if (rank_top12_point >= 201 && rank_top12_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,269);
+			AuDDS("g_list");
+		}
+		if (rank_top13_point >= 201 && rank_top13_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,287);
+			AuDDS("g_list");
+		}
+		if (rank_top14_point >= 201 && rank_top14_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,305);
+			AuDDS("g_list");
+		}
+		if (rank_top15_point >= 201 && rank_top15_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,323);
+			AuDDS("g_list");
+		}
+		if (rank_top16_point >= 201 && rank_top16_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,341);
+			AuDDS("g_list");
+		}
+		if (rank_top17_point >= 201 && rank_top17_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,359);
+			AuDDS("g_list");
+		}
+		if (rank_top18_point >= 201 && rank_top18_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,377);
+			AuDDS("g_list");
+		}
+		if (rank_top19_point >= 201 && rank_top19_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,395);
+			AuDDS("g_list");
+		}
+		if (rank_top20_point >= 201 && rank_top20_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,413);
+			AuDDS("g_list");
+		}
+		if (rank_top21_point >= 201 && rank_top21_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,431);
+			AuDDS("g_list");
+		}
+		if (rank_top22_point >= 201 && rank_top22_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,449);
+			AuDDS("g_list");
+		}
+		if (rank_top23_point >= 201 && rank_top23_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,467);
+			AuDDS("g_list");
+		}
+		if (rank_top24_point >= 201 && rank_top24_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,485);
+			AuDDS("g_list");
+		}
+		if (rank_top25_point >= 201 && rank_top25_point <= 300) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,503);
+			AuDDS("g_list");
+		}
+
+		// 第四段：301 到 400 分，显示 p_list
+		if (rank_top1_point >= 301 && rank_top1_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,71);
+			AuDDS("p_list");
+		}
+		if (rank_top2_point >= 301 && rank_top2_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,89);
+			AuDDS("p_list");
+		}
+		if (rank_top3_point >= 301 && rank_top3_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,107);
+			AuDDS("p_list");
+		}
+		if (rank_top4_point >= 301 && rank_top4_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,125);
+			AuDDS("p_list");
+		}
+		if (rank_top5_point >= 301 && rank_top5_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,143);
+			AuDDS("p_list");
+		}
+		if (rank_top6_point >= 301 && rank_top6_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,161);
+			AuDDS("p_list");
+		}
+		if (rank_top7_point >= 301 && rank_top7_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,179);
+			AuDDS("p_list");
+		}
+		if (rank_top8_point >= 301 && rank_top8_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,197);
+			AuDDS("p_list");
+		}
+		if (rank_top9_point >= 301 && rank_top9_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,215);
+			AuDDS("p_list");
+		}
+		if (rank_top10_point >= 301 && rank_top10_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,233);
+			AuDDS("p_list");
+		}
+		if (rank_top11_point >= 301 && rank_top11_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,251);
+			AuDDS("p_list");
+		}
+		if (rank_top12_point >= 301 && rank_top12_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,269);
+			AuDDS("p_list");
+		}
+		if (rank_top13_point >= 301 && rank_top13_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,287);
+			AuDDS("p_list");
+		}
+		if (rank_top14_point >= 301 && rank_top14_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,305);
+			AuDDS("p_list");
+		}
+		if (rank_top15_point >= 301 && rank_top15_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,323);
+			AuDDS("p_list");
+		}
+		if (rank_top16_point >= 301 && rank_top16_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,341);
+			AuDDS("p_list");
+		}
+		if (rank_top17_point >= 301 && rank_top17_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,359);
+			AuDDS("p_list");
+		}
+		if (rank_top18_point >= 301 && rank_top18_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,377);
+			AuDDS("p_list");
+		}
+		if (rank_top19_point >= 301 && rank_top19_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,395);
+			AuDDS("p_list");
+		}
+		if (rank_top20_point >= 301 && rank_top20_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,413);
+			AuDDS("p_list");
+		}
+		if (rank_top21_point >= 301 && rank_top21_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,431);
+			AuDDS("p_list");
+		}
+		if (rank_top22_point >= 301 && rank_top22_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,449);
+			AuDDS("p_list");
+		}
+		if (rank_top23_point >= 301 && rank_top23_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,467);
+			AuDDS("p_list");
+		}
+		if (rank_top24_point >= 301 && rank_top24_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,485);
+			AuDDS("p_list");
+		}
+		if (rank_top25_point >= 301 && rank_top25_point <= 400) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,503);
+			AuDDS("p_list");
+		}
+
+		// 第五段：401 到 500 分，显示 d_list
+		if (rank_top1_point >= 401 && rank_top1_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,71);
+			AuDDS("d_list");
+		}
+		if (rank_top2_point >= 401 && rank_top2_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,89);
+			AuDDS("d_list");
+		}
+		if (rank_top3_point >= 401 && rank_top3_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,107);
+			AuDDS("d_list");
+		}
+		if (rank_top4_point >= 401 && rank_top4_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,125);
+			AuDDS("d_list");
+		}
+		if (rank_top5_point >= 401 && rank_top5_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,143);
+			AuDDS("d_list");
+		}
+		if (rank_top6_point >= 401 && rank_top6_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,161);
+			AuDDS("d_list");
+		}
+		if (rank_top7_point >= 401 && rank_top7_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,179);
+			AuDDS("d_list");
+		}
+		if (rank_top8_point >= 401 && rank_top8_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,197);
+			AuDDS("d_list");
+		}
+		if (rank_top9_point >= 401 && rank_top9_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,215);
+			AuDDS("d_list");
+		}
+		if (rank_top10_point >= 401 && rank_top10_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,233);
+			AuDDS("d_list");
+		}
+		if (rank_top11_point >= 401 && rank_top11_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,251);
+			AuDDS("d_list");
+		}
+		if (rank_top12_point >= 401 && rank_top12_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,269);
+			AuDDS("d_list");
+		}
+		if (rank_top13_point >= 401 && rank_top13_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,287);
+			AuDDS("d_list");
+		}
+		if (rank_top14_point >= 401 && rank_top14_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,305);
+			AuDDS("d_list");
+		}
+		if (rank_top15_point >= 401 && rank_top15_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,323);
+			AuDDS("d_list");
+		}
+		if (rank_top16_point >= 401 && rank_top16_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,341);
+			AuDDS("d_list");
+		}
+		if (rank_top17_point >= 401 && rank_top17_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,359);
+			AuDDS("d_list");
+		}
+		if (rank_top18_point >= 401 && rank_top18_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,377);
+			AuDDS("d_list");
+		}
+		if (rank_top19_point >= 401 && rank_top19_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,395);
+			AuDDS("d_list");
+		}
+		if (rank_top20_point >= 401 && rank_top20_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,413);
+			AuDDS("d_list");
+		}
+		if (rank_top21_point >= 401 && rank_top21_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,431);
+			AuDDS("d_list");
+		}
+		if (rank_top22_point >= 401 && rank_top22_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,449);
+			AuDDS("d_list");
+		}
+		if (rank_top23_point >= 401 && rank_top23_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,467);
+			AuDDS("d_list");
+		}
+		if (rank_top24_point >= 401 && rank_top24_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,485);
+			AuDDS("d_list");
+		}
+		if (rank_top25_point >= 401 && rank_top25_point <= 500) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,503);
+			AuDDS("d_list");
+		}
+
+		// 第六段：501 到 600 分，显示 c_list
+		if (rank_top1_point >= 501 && rank_top1_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,71);
+			AuDDS("c_list");
+
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(824+g_fixwinsize_x,69);
+			AuDDS("c_list3");
+		}
+		if (rank_top2_point >= 501 && rank_top2_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,89);
+			AuDDS("c_list");
+		}
+		if (rank_top3_point >= 501 && rank_top3_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,107);
+			AuDDS("c_list");
+		}
+		if (rank_top4_point >= 501 && rank_top4_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,125);
+			AuDDS("c_list");
+		}
+		if (rank_top5_point >= 501 && rank_top5_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,143);
+			AuDDS("c_list");
+		}
+		if (rank_top6_point >= 501 && rank_top6_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,161);
+			AuDDS("c_list");
+		}
+		if (rank_top7_point >= 501 && rank_top7_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,179);
+			AuDDS("c_list");
+		}
+		if (rank_top8_point >= 501 && rank_top8_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,197);
+			AuDDS("c_list");
+		}
+		if (rank_top9_point >= 501 && rank_top9_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,215);
+			AuDDS("c_list");
+		}
+		if (rank_top10_point >= 501 && rank_top10_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,233);
+			AuDDS("c_list");
+		}
+		if (rank_top11_point >= 501 && rank_top11_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,251);
+			AuDDS("c_list");
+		}
+		if (rank_top12_point >= 501 && rank_top12_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,269);
+			AuDDS("c_list");
+		}
+		if (rank_top13_point >= 501 && rank_top13_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,287);
+			AuDDS("c_list");
+		}
+		if (rank_top14_point >= 501 && rank_top14_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,305);
+			AuDDS("c_list");
+		}
+		if (rank_top15_point >= 501 && rank_top15_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,323);
+			AuDDS("c_list");
+		}
+		if (rank_top16_point >= 501 && rank_top16_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,341);
+			AuDDS("c_list");
+		}
+		if (rank_top17_point >= 501 && rank_top17_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,359);
+			AuDDS("c_list");
+		}
+		if (rank_top18_point >= 501 && rank_top18_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,377);
+			AuDDS("c_list");
+		}
+		if (rank_top19_point >= 501 && rank_top19_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,395);
+			AuDDS("c_list");
+		}
+		if (rank_top20_point >= 501 && rank_top20_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,413);
+			AuDDS("c_list");
+		}
+		if (rank_top21_point >= 501 && rank_top21_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,431);
+			AuDDS("c_list");
+		}
+		if (rank_top22_point >= 501 && rank_top22_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,449);
+			AuDDS("c_list");
+		}
+		if (rank_top23_point >= 501 && rank_top23_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,467);
+			AuDDS("c_list");
+		}
+		if (rank_top24_point >= 501 && rank_top24_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,485);
+			AuDDS("c_list");
+		}
+		if (rank_top25_point >= 501 && rank_top25_point <= 600) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,503);
+			AuDDS("c_list");
+		}
+
+		// 第七段：601 到 99999 分，显示 c_list2
+		if (rank_top1_point >= 601 && rank_top1_point <= 99999) {
+
+			DWORD currentTime = GetTickCount();
+			DWORD cycleTime = currentTime % 2000;  // 2秒循環
+			if (cycleTime < 1000) {
+				AuPath("TEXTURE/hud/BeatUp");
+				AuPos(825+g_fixwinsize_x,71);
+				AuDDS("c_list2");
+			} else {
+				AuPath("TEXTURE/hud/BeatUp");
+				AuPos(825+g_fixwinsize_x,71);
+				AuDDS("c_list2_2");
+			}
+
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(824+g_fixwinsize_x,69);
+			AuDDS("c_list3");
+		}
+		if (rank_top2_point >= 601 && rank_top2_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,89);
+			AuDDS("c_list2");
+		}
+		if (rank_top3_point >= 601 && rank_top3_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,107);
+			AuDDS("c_list2");
+		}
+		if (rank_top4_point >= 601 && rank_top4_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,125);
+			AuDDS("c_list2");
+		}
+		if (rank_top5_point >= 601 && rank_top5_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,143);
+			AuDDS("c_list2");
+		}
+		if (rank_top6_point >= 601 && rank_top6_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,161);
+			AuDDS("c_list2");
+		}
+		if (rank_top7_point >= 601 && rank_top7_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,179);
+			AuDDS("c_list2");
+		}
+		if (rank_top8_point >= 601 && rank_top8_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,197);
+			AuDDS("c_list2");
+		}
+		if (rank_top9_point >= 601 && rank_top9_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,215);
+			AuDDS("c_list2");
+		}
+		if (rank_top10_point >= 601 && rank_top10_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,233);
+			AuDDS("c_list2");
+		}
+		if (rank_top11_point >= 601 && rank_top11_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,251);
+			AuDDS("c_list2");
+		}
+		if (rank_top12_point >= 601 && rank_top12_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,269);
+			AuDDS("c_list2");
+		}
+		if (rank_top13_point >= 601 && rank_top13_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,287);
+			AuDDS("c_list2");
+		}
+		if (rank_top14_point >= 601 && rank_top14_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,305);
+			AuDDS("c_list2");
+		}
+		if (rank_top15_point >= 601 && rank_top15_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,323);
+			AuDDS("c_list2");
+		}
+		if (rank_top16_point >= 601 && rank_top16_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,341);
+			AuDDS("c_list2");
+		}
+		if (rank_top17_point >= 601 && rank_top17_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,359);
+			AuDDS("c_list2");
+		}
+		if (rank_top18_point >= 601 && rank_top18_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,377);
+			AuDDS("c_list2");
+		}
+		if (rank_top19_point >= 601 && rank_top19_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,395);
+			AuDDS("c_list2");
+		}
+		if (rank_top20_point >= 601 && rank_top20_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,413);
+			AuDDS("c_list2");
+		}
+		if (rank_top21_point >= 601 && rank_top21_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,431);
+			AuDDS("c_list2");
+		}
+		if (rank_top22_point >= 601 && rank_top22_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,449);
+			AuDDS("c_list2");
+		}
+		if (rank_top23_point >= 601 && rank_top23_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,467);
+			AuDDS("c_list2");
+		}
+		if (rank_top24_point >= 601 && rank_top24_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,485);
+			AuDDS("c_list2");
+		}
+		if (rank_top25_point >= 601 && rank_top25_point <= 99999) {
+			AuPath("TEXTURE/hud/BeatUp");
+			AuPos(825+g_fixwinsize_x,503);
+			AuDDS("c_list2");
+		}
+
+		
+		
+
+
+
+		//if (rank_top1_point >= -100){
+		//if (rank_top1_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,320);
+		//AuDDS("b_list");}}
+
+		//if (rank_top2_point >= -100){
+		//if (rank_top2_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,340);
+		//AuDDS("b_list");}}
+
+		//if (rank_top3_point >= -100){
+		//if (rank_top3_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,360);
+		//AuDDS("b_list");}}
+
+		//if (rank_top4_point >= -100){
+		//if (rank_top4_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,380);
+		//AuDDS("b_list");}}
+
+		//if (rank_top5_point >= -100){
+		//if (rank_top5_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,400);
+		//AuDDS("b_list");}}
+
+		//if (rank_top6_point >= -100){
+		//if (rank_top6_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,420);
+		//AuDDS("b_list");}}
+
+		//if (rank_top7_point >= -100){
+		//if (rank_top7_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,440);
+		//AuDDS("b_list");}}
+
+		//if (rank_top8_point >= -100){
+		//if (rank_top8_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,460);
+		//AuDDS("b_list");}}
+
+		//if (rank_top9_point >= -100){
+		//if (rank_top9_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,480);
+		//AuDDS("b_list");}}
+
+		//if (rank_top10_point >= -100){
+		//if (rank_top10_point <= 100){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,500);
+		//AuDDS("b_list");}}
+
+
+
+		//if (rank_top1_point >= 101){
+		//if (rank_top1_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,320);
+		//AuDDS("s_list");}}
+
+		//if (rank_top2_point >= 101){
+		//if (rank_top2_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,340);
+		//AuDDS("s_list");}}
+
+		//if (rank_top3_point >= 101){
+		//if (rank_top3_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,360);
+		//AuDDS("s_list");}}
+
+		//if (rank_top4_point >= 101){
+		//if (rank_top4_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,380);
+		//AuDDS("s_list");}}
+
+		//if (rank_top5_point >= 101){
+		//if (rank_top5_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,400);
+		//AuDDS("s_list");}}
+
+		//if (rank_top6_point >= 101){
+		//if (rank_top6_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,420);
+		//AuDDS("s_list");}}
+
+		//if (rank_top7_point >= 101){
+		//if (rank_top7_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,440);
+		//AuDDS("s_list");}}
+
+		//if (rank_top8_point >= 101){
+		//if (rank_top8_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,460);
+		//AuDDS("s_list");}}
+
+		//if (rank_top9_point >= 101){
+		//if (rank_top9_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,480);
+		//AuDDS("s_list");}}
+
+		//if (rank_top10_point >= 101){
+		//if (rank_top10_point <= 200){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,500);
+		//AuDDS("s_list");}}
+
+
+
+		//if (rank_top1_point >= 201){
+		//if (rank_top1_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,320);
+		//AuDDS("g_list");}}
+
+		//if (rank_top2_point >= 201){
+		//if (rank_top2_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,340);
+		//AuDDS("g_list");}}
+
+		//if (rank_top3_point >= 201){
+		//if (rank_top3_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,360);
+		//AuDDS("g_list");}}
+
+		//if (rank_top4_point >= 201){
+		//if (rank_top4_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,380);
+		//AuDDS("g_list");}}
+
+		//if (rank_top5_point >= 201){
+		//if (rank_top5_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,400);
+		//AuDDS("g_list");}}
+
+		//if (rank_top6_point >= 201){
+		//if (rank_top6_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,420);
+		//AuDDS("g_list");}}
+
+		//if (rank_top7_point >= 201){
+		//if (rank_top7_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,440);
+		//AuDDS("g_list");}}
+
+		//if (rank_top8_point >= 201){
+		//if (rank_top8_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,460);
+		//AuDDS("g_list");}}
+
+		//if (rank_top9_point >= 201){
+		//if (rank_top9_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,480);
+		//AuDDS("g_list");}}
+
+		//if (rank_top10_point >= 201){
+		//if (rank_top10_point <= 300){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,500);
+		//AuDDS("g_list");}}
+
+
+
+		//if (rank_top1_point >= 301){
+		//if (rank_top1_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,320);
+		//AuDDS("p_list");}}
+
+		//if (rank_top2_point >= 301){
+		//if (rank_top2_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,340);
+		//AuDDS("p_list");}}
+
+		//if (rank_top3_point >= 301){
+		//if (rank_top3_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,360);
+		//AuDDS("p_list");}}
+
+		//if (rank_top4_point >= 301){
+		//if (rank_top4_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,380);
+		//AuDDS("p_list");}}
+
+		//if (rank_top5_point >= 301){
+		//if (rank_top5_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,400);
+		//AuDDS("p_list");}}
+
+		//if (rank_top6_point >= 301){
+		//if (rank_top6_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,420);
+		//AuDDS("p_list");}}
+
+		//if (rank_top7_point >= 301){
+		//if (rank_top7_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,440);
+		//AuDDS("p_list");}}
+
+		//if (rank_top8_point >= 301){
+		//if (rank_top8_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,460);
+		//AuDDS("p_list");}}
+
+		//if (rank_top9_point >= 301){
+		//if (rank_top9_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,480);
+		//AuDDS("p_list");}}
+
+		//if (rank_top10_point >= 301){
+		//if (rank_top10_point <= 400){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,500);
+		//AuDDS("p_list");}}
+
+
+
+		//if (rank_top1_point >= 401){
+		//if (rank_top1_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,320);
+		//AuDDS("d_list");}}
+
+		//if (rank_top2_point >= 401){
+		//if (rank_top2_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,340);
+		//AuDDS("d_list");}}
+
+		//if (rank_top3_point >= 401){
+		//if (rank_top3_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,360);
+		//AuDDS("d_list");}}
+
+		//if (rank_top4_point >= 401){
+		//if (rank_top4_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,380);
+		//AuDDS("d_list");}}
+
+		//if (rank_top5_point >= 401){
+		//if (rank_top5_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,400);
+		//AuDDS("d_list");}}
+
+		//if (rank_top6_point >= 401){
+		//if (rank_top6_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,420);
+		//AuDDS("d_list");}}
+
+		//if (rank_top7_point >= 401){
+		//if (rank_top7_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,440);
+		//AuDDS("d_list");}}
+
+		//if (rank_top8_point >= 401){
+		//if (rank_top8_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,460);
+		//AuDDS("d_list");}}
+
+		//if (rank_top9_point >= 401){
+		//if (rank_top9_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,480);
+		//AuDDS("d_list");}}
+
+		//if (rank_top10_point >= 401){
+		//if (rank_top10_point <= 500){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,500);
+		//AuDDS("d_list");}}
+
+
+
+		//if (rank_top1_point >= 501){
+		//if (rank_top1_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,320);
+		//AuDDS("c_list");}}
+
+		//if (rank_top2_point >= 501){
+		//if (rank_top2_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,340);
+		//AuDDS("c_list");}}
+
+		//if (rank_top3_point >= 501){
+		//if (rank_top3_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,360);
+		//AuDDS("c_list");}}
+
+		//if (rank_top4_point >= 501){
+		//if (rank_top4_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,380);
+		//AuDDS("c_list");}}
+
+		//if (rank_top5_point >= 501){
+		//if (rank_top5_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,400);
+		//AuDDS("c_list");}}
+
+		//if (rank_top6_point >= 501){
+		//if (rank_top6_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,420);
+		//AuDDS("c_list");}}
+
+		//if (rank_top7_point >= 501){
+		//if (rank_top7_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,440);
+		//AuDDS("c_list");}}
+
+		//if (rank_top8_point >= 501){
+		//if (rank_top8_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,460);
+		//AuDDS("c_list");}}
+
+		//if (rank_top9_point >= 501){
+		//if (rank_top9_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,480);
+		//AuDDS("c_list");}}
+
+		//if (rank_top10_point >= 501){
+		//if (rank_top10_point <= 600){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,500);
+		//AuDDS("c_list");}}
+
+
+
+		//if (rank_top1_point >= 601){
+		//if (rank_top1_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,320);
+		//AuDDS("c_list2");}}
+
+		//if (rank_top2_point >= 601){
+		//if (rank_top2_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,340);
+		//AuDDS("c_list2");}}
+
+		//if (rank_top3_point >= 601){
+		//if (rank_top3_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,360);
+		//AuDDS("c_list2");}}
+
+		//if (rank_top4_point >= 601){
+		//if (rank_top4_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,380);
+		//AuDDS("c_list2");}}
+
+		//if (rank_top5_point >= 601){
+		//if (rank_top5_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,400);
+		//AuDDS("c_list2");}}
+
+		//if (rank_top6_point >= 601){
+		//if (rank_top6_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,420);
+		//AuDDS("c_list2");}}
+
+		//if (rank_top7_point >= 601){
+		//if (rank_top7_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,440);
+		//AuDDS("c_list2");}}
+
+		//if (rank_top8_point >= 601){
+		//if (rank_top8_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,460);
+		//AuDDS("c_list2");}}
+
+		//if (rank_top9_point >= 601){
+		//if (rank_top9_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,480);
+		//AuDDS("c_list2");}}
+
+		//if (rank_top10_point >= 601){
+		//if (rank_top10_point <= 99999){
+		//AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(825,500);
+		//AuDDS("c_list2");}}
+
+		}
+
+//}
+
+
+			}
+
+
+	if (*(DWORD*)OFS_ROOM_STATUS == INROOM){ //inroom
+
+		BUPatchMain->RAMFREEDisplayName((char*) ramfreeText);
+
+
+		AuPos(400,749);
+		AuDraw("%s", ramfreeText);
+
+		AuPath("TEXTURE/hud/BeatUp"); //path
+		AuPos(-510-g_fixwinsize_x,55);
+		AuDDS("tabinfooff");
+
+		AuPath("TEXTURE/hud/BeatUp"); //path
+		AuPos(-510-g_fixwinsize_x,135);
+		AuDDS("altinfooff");
+
+		AuPath("TEXTURE/hud/BeatUp"); //path
+		AuPos(-510-g_fixwinsize_x,215);
+		AuDDS("viproom");
+
+		AuPath("TEXTURE/hud/BeatUp"); //path
+		AuPos(-510-g_fixwinsize_x,295);
+		AuDDS("f4");
+
+
+	if (tabInfo ==0){
+
+		AuPath("TEXTURE/hud/BeatUp"); //path
+		AuPos(-2-g_fixwinsize_x,55);
+		AuDDS("tabinfo");
+
+		//altInfo = 1;
+	}
+
+	if (altInfo ==0){
+
+		AuPath("TEXTURE/hud/BeatUp"); //path
+		AuPos(-2-g_fixwinsize_x,135);
+		AuDDS("altinfo");
+
+		//tabInfo = 1;
+	}
+
+	}
+
+
+
+	//if (strcmp((char *)OFS_FREEDOM, "") == 0) {
+	//	BUPatchMain->GetPws(); //get password
+	//	BUPatchMain->AutoLogin(); //auto login
+	//}
+
+	if (*(DWORD*)OFS_ROOM_STATUS == INROOM){ //inroom
+
+		game_exp = (total_round*137);
+
+		if (game_exp >= 0){
+			if (game_exp < 100){
+
+				game_level = 1;
+				game_max_exp = 100;
+
+			}
+		}
+
+		if (game_exp >= 100){
+			if (game_exp < 210){
+
+				game_level = 2;
+				game_max_exp = 210;
+
+			}
+		}
+
+		if (game_exp >= 210){
+			if (game_exp < 331){
+
+				game_level = 3;
+				game_max_exp = 331;
+
+			}
+		}
+
+		if (game_exp >= 331){
+			if (game_exp < 464){
+
+				game_level = 4;
+				game_max_exp = 464;
+
+			}
+		}
+
+		if (game_exp >= 464){
+			if (game_exp < 610){
+
+				game_level = 5;
+				game_max_exp = 610;
+
+			}
+		}
+
+		if (game_exp >= 610){
+			if (game_exp < 771){
+
+				game_level = 6;
+				game_max_exp = 771;
+
+			}
+		}
+
+		if (game_exp >= 771){
+			if (game_exp < 948){
+
+				game_level = 7;
+				game_max_exp = 948;
+
+			}
+		}
+
+		if (game_exp >= 948){
+			if (game_exp < 1143){
+
+				game_level = 8;
+				game_max_exp = 1143;
+
+			}
+		}
+
+		if (game_exp >= 1143){
+			if (game_exp < 1357){
+
+				game_level = 9;
+				game_max_exp = 1357;
+
+			}
+		}
+
+		if (game_exp >= 1357){
+			if (game_exp < 1593){
+
+				game_level = 10;
+				game_max_exp = 1593;
+
+			}
+		}
+
+		if (game_exp >= 1593){
+			if (game_exp < 1852){
+
+				game_level = 11;
+				game_max_exp = 1852;
+
+			}
+		}
+
+		if (game_exp >= 1852){
+			if (game_exp < 2137){
+
+				game_level = 12;
+				game_max_exp = 2137;
+
+			}
+		}
+
+		if (game_exp >= 2137){
+			if (game_exp < 2451){
+
+				game_level = 13;
+				game_max_exp = 2451;
+
+			}
+		}
+
+		if (game_exp >= 2451){
+			if (game_exp < 2796){
+
+				game_level = 14;
+				game_max_exp = 2796;
+
+			}
+		}
+
+		if (game_exp >= 2796){
+			if (game_exp < 3176){
+
+				game_level = 15;
+				game_max_exp = 3176;
+
+			}
+		}
+
+		if (game_exp >= 3176){
+			if (game_exp < 3594){
+
+				game_level = 16;
+				game_max_exp = 3594;
+
+			}
+		}
+
+		if (game_exp >= 3594){
+			if (game_exp < 4053){
+
+				game_level = 17;
+				game_max_exp = 4053;
+
+			}
+		}
+
+		if (game_exp >= 4053){
+			if (game_exp < 4558){
+
+				game_level = 18;
+				game_max_exp = 4558;
+
+			}
+		}
+
+		if (game_exp >= 4558){
+			if (game_exp < 5114){
+
+				game_level = 19;
+				game_max_exp = 5114;
+
+			}
+		}
+
+		if (game_exp >= 5114){
+			if (game_exp < 5725){
+
+				game_level = 20;
+				game_max_exp = 5725;
+
+			}
+		}
+
+		if (game_exp >= 5725){
+			if (game_exp < 6397){
+
+				game_level = 21;
+				game_max_exp = 6397;
+
+			}
+		}
+
+		if (game_exp >= 6397){
+			if (game_exp < 7137){
+
+				game_level = 22;
+				game_max_exp = 7137;
+
+			}
+		}
+
+		if (game_exp >= 7137){
+			if (game_exp < 7951){
+
+				game_level = 23;
+				game_max_exp = 7951;
+
+			}
+		}
+
+		if (game_exp >= 7951){
+			if (game_exp < 8846){
+
+				game_level = 24;
+				game_max_exp = 8846;
+
+			}
+		}
+
+		if (game_exp >= 8846){
+			if (game_exp < 9831){
+
+				game_level = 25;
+				game_max_exp = 9831;
+
+			}
+		}
+
+		if (game_exp >= 9831){
+			if (game_exp < 10915){
+
+				game_level = 26;
+				game_max_exp = 10915;
+
+			}
+		}
+
+		if (game_exp >= 10915){
+			if (game_exp < 12107){
+
+				game_level = 27;
+				game_max_exp = 12107;
+
+			}
+		}
+
+		if (game_exp >= 12107){
+			if (game_exp < 13418){
+
+				game_level = 28;
+				game_max_exp = 13418;
+
+			}
+		}
+
+		if (game_exp >= 13418){
+			if (game_exp < 14860){
+
+				game_level = 29;
+				game_max_exp = 14860;
+
+			}
+		}
+
+		if (game_exp >= 14860){
+			if (game_exp < 16446){
+
+				game_level = 30;
+				game_max_exp = 16446;
+
+			}
+		}
+
+		if (game_exp >= 16446){
+			if (game_exp < 18191){
+
+				game_level = 31;
+				game_max_exp = 18191;
+
+			}
+		}
+
+		if (game_exp >= 18191){
+			if (game_exp < 20111){
+
+				game_level = 32;
+				game_max_exp = 20111;
+
+			}
+		}
+
+		if (game_exp >= 20111){
+			if (game_exp < 22223){
+
+				game_level = 33;
+				game_max_exp = 22223;
+
+			}
+		}
+
+		if (game_exp >= 22223){
+			if (game_exp < 24547){
+
+				game_level = 34;
+				game_max_exp = 24547;
+
+			}
+		}
+
+		if (game_exp >= 24547){
+			if (game_exp < 27104){
+
+				game_level = 35;
+				game_max_exp = 27104;
+
+			}
+		}
+
+		if (game_exp >= 27104){
+			if (game_exp < 29917){
+
+				game_level = 36;
+				game_max_exp = 29917;
+
+			}
+		}
+
+		if (game_exp >= 29917){
+			if (game_exp < 33011){
+
+				game_level = 37;
+				game_max_exp = 33011;
+
+			}
+		}
+
+		if (game_exp >= 33011){
+			if (game_exp < 36414){
+
+				game_level = 38;
+				game_max_exp = 36414;
+
+			}
+		}
+
+		if (game_exp >= 36414){
+			if (game_exp < 40157){
+
+				game_level = 39;
+				game_max_exp = 40157;
+
+			}
+		}
+
+		if (game_exp >= 40157){
+			if (game_exp < 44274){
+
+				game_level = 40;
+				game_max_exp = 44274;
+
+			}
+		}
+
+		if (game_exp >= 44274){
+			if (game_exp < 48803){
+
+				game_level = 41;
+				game_max_exp = 48803;
+
+			}
+		}
+
+		if (game_exp >= 48803){
+			if (game_exp < 53785){
+
+				game_level = 42;
+				game_max_exp = 53785;
+
+			}
+		}
+
+		if (game_exp >= 53785){
+			if (game_exp < 59265){
+
+				game_level = 43;
+				game_max_exp = 59265;
+
+			}
+		}
+
+		if (game_exp >= 59265){
+			if (game_exp < 65293){
+
+				game_level = 44;
+				game_max_exp = 65293;
+
+			}
+		}
+
+		if (game_exp >= 65293){
+			if (game_exp < 71924){
+
+				game_level = 45;
+				game_max_exp = 71924;
+
+			}
+		}
+
+		if (game_exp >= 71924){
+			if (game_exp < 79218){
+
+				game_level = 46;
+				game_max_exp = 79218;
+
+			}
+		}
+
+		if (game_exp >= 79218){
+			if (game_exp < 87241){
+
+				game_level = 47;
+				game_max_exp = 87241;
+
+			}
+		}
+
+		if (game_exp >= 87241){
+			if (game_exp < 96066){
+
+				game_level = 48;
+				game_max_exp = 96066;
+
+			}
+		}
+
+		if (game_exp >= 96066){
+			if (game_exp < 105773){
+
+				game_level = 49;
+				game_max_exp = 105773;
+
+			}
+		}
+
+		if (game_exp >= 105773){
+			if (game_exp < 116451){
+
+				game_level = 50;
+				game_max_exp = 116451;
+
+			}
+		}
+
+		if (game_exp >= 116451){
+			if (game_exp < 128197){
+
+				game_level = 51;
+				game_max_exp = 128197;
+
+			}
+		}
+
+		if (game_exp >= 128197){
+			if (game_exp < 141016){
+
+				game_level = 52;
+				game_max_exp = 141016;
+
+			}
+		}
+
+		if (game_exp >= 141016){
+			if (game_exp < 155117){
+
+				game_level = 53;
+				game_max_exp = 155117;
+
+			}
+		}
+
+		if (game_exp >= 155117){
+			if (game_exp < 170628){
+
+				game_level = 54;
+				game_max_exp = 170628;
+
+			}
+		}
+
+		if (game_exp >= 170628){
+			if (game_exp < 187691){
+
+				game_level = 55;
+				game_max_exp = 187691;
+
+			}
+		}
+
+		if (game_exp >= 187691){
+			if (game_exp < 206460){
+
+				game_level = 56;
+				game_max_exp = 206460;
+
+			}
+		}
+
+		if (game_exp >= 206460){
+			if (game_exp < 226106){
+
+				game_level = 57;
+				game_max_exp = 226106;
+
+			}
+		}
+
+		if (game_exp >= 226106){
+			if (game_exp < 248717){
+
+				game_level = 58;
+				game_max_exp = 248717;
+
+			}
+		}
+
+		if (game_exp >= 248717){
+			if (game_exp < 273589){
+
+				game_level = 59;
+				game_max_exp = 273589;
+
+			}
+		}
+
+		if (game_exp >= 273589){
+			if (game_exp < 300948){
+
+				game_level = 60;
+				game_max_exp = 300948;
+
+			}
+		}
+
+		if (game_exp >= 300948){
+			if (game_exp < 331043){
+
+				game_level = 61;
+				game_max_exp = 331043;
+
+			}
+		}
+
+		if (game_exp >= 331043){
+			if (game_exp < 364147){
+
+				game_level = 62;
+				game_max_exp = 364147;
+
+			}
+		}
+
+		if (game_exp >= 364147){
+			if (game_exp < 400562){
+
+				game_level = 63;
+				game_max_exp = 400562;
+
+			}
+		}
+
+		if (game_exp >= 400562){
+			if (game_exp < 440618){
+
+				game_level = 64;
+				game_max_exp = 440618;
+
+			}
+		}
+
+		if (game_exp >= 440618){
+			if (game_exp < 484680){
+
+				game_level = 65;
+				game_max_exp = 484680;
+
+			}
+		}
+
+		if (game_exp >= 484680){
+			if (game_exp < 533148){
+
+				game_level = 66;
+				game_max_exp = 533148;
+
+			}
+		}
+
+		if (game_exp >= 533148){
+			if (game_exp < 586463){
+
+				game_level = 67;
+				game_max_exp = 586463;
+
+			}
+		}
+
+		if (game_exp >= 586463){
+			if (game_exp < 644109){
+
+				game_level = 68;
+				game_max_exp = 644109;
+
+			}
+		}
+
+		if (game_exp >= 644109){
+			if (game_exp < 708520){
+
+				game_level = 69;
+				game_max_exp = 708520;
+
+			}
+		}
+
+		if (game_exp >= 708520){
+			if (game_exp < 779372){
+
+				game_level = 70;
+				game_max_exp = 779372;
+
+			}
+		}
+
+		if (game_exp >= 779372){
+			if (game_exp < 857309){
+
+				game_level = 71;
+				game_max_exp = 857309;
+
+			}
+		}
+
+		if (game_exp >= 857309){
+			if (game_exp < 943040){
+
+				game_level = 72;
+				game_max_exp = 943040;
+
+			}
+		}
+
+		if (game_exp >= 943040){
+			if (game_exp < 1037344){
+
+				game_level = 73;
+				game_max_exp = 1037344;
+
+			}
+		}
+
+		if (game_exp >= 1037344){
+			if (game_exp < 1131078){
+
+				game_level = 74;
+				game_max_exp = 1131078;
+
+			}
+		}
+
+		if (game_exp >= 1131075){
+			if (game_exp < 1244186){
+
+				game_level = 74;
+				game_max_exp = 1244186;
+
+			}
+		}
+
+		if (game_exp >= 1244186){
+			if (game_exp < 1368604){
+
+				game_level = 76;
+				game_max_exp = 1368604;
+
+			}
+		}
+
+		if (game_exp >= 1368604){
+			if (game_exp < 1505464){
+
+				game_level = 77;
+				game_max_exp = 1505464;
+
+			}
+		}
+
+		if (game_exp >= 1505464){
+			if (game_exp < 1656010){
+
+				game_level = 78;
+				game_max_exp = 1656010;
+
+			}
+		}
+
+		if (game_exp >= 1656010){
+			if (game_exp < 1821611){
+
+				game_level = 79;
+				game_max_exp = 1821611;
+
+			}
+		}
+
+		if (game_exp >= 1821611){
+			if (game_exp < 2003772){
+
+				game_level = 80;
+				game_max_exp = 2003772;
+
+			}
+		}
+
+		if (game_exp >= 2003772){
+			if (game_exp < 2204150){
+
+				game_level = 81;
+				game_max_exp = 2204150;
+
+			}
+		}
+
+		if (game_exp >= 2204150){
+			if (game_exp < 2424565){
+
+				game_level = 82;
+				game_max_exp = 2424565;
+
+			}
+		}
+
+		if (game_exp >= 2424565){
+			if (game_exp < 2667022){
+
+				game_level = 83;
+				game_max_exp = 2667022;
+
+			}
+		}
+
+		if (game_exp >= 2667022){
+			if (game_exp < 2933724){
+
+				game_level = 84;
+				game_max_exp = 2933724;
+
+			}
+		}
+
+		if (game_exp >= 2933724){
+			if (game_exp < 3227096){
+
+				game_level = 85;
+				game_max_exp = 3227096;
+
+			}
+		}
+
+		if (game_exp >= 3227096){
+			if (game_exp < 3549805){
+
+				game_level = 86;
+				game_max_exp = 3549805;
+
+			}
+		}
+
+		if (game_exp >= 3549805){
+			if (game_exp < 3904786){
+
+				game_level = 87;
+				game_max_exp = 3904786;
+
+			}
+		}
+
+		if (game_exp >= 3904786){
+			if (game_exp < 4295264){
+
+				game_level = 88;
+				game_max_exp = 4295264;
+
+			}
+		}
+
+		if (game_exp >= 4295264){
+			if (game_exp < 4724790){
+
+				game_level = 89;
+				game_max_exp = 4724790;
+
+			}
+		}
+
+		if (game_exp >= 4724790){
+			if (game_exp < 5197269){
+
+				game_level = 90;
+				game_max_exp = 5197269;
+
+			}
+		}
+
+		if (game_exp >= 5197269){
+			if (game_exp < 5716996){
+
+				game_level = 91;
+				game_max_exp = 5716996;
+
+			}
+		}
+
+		if (game_exp >= 5716996){
+			if (game_exp < 6288695){
+
+				game_level = 92;
+				game_max_exp = 6288695;
+
+			}
+		}
+
+		if (game_exp >= 6288695){
+			if (game_exp < 6917564){
+
+				game_level = 93;
+				game_max_exp = 6917564;
+
+			}
+		}
+
+		if (game_exp >= 6917564){
+			if (game_exp < 7609319){
+
+				game_level = 94;
+				game_max_exp = 7609319;
+
+			}
+		}
+
+		if (game_exp >= 7609319){
+			if (game_exp < 8370241){
+
+				game_level = 95;
+				game_max_exp = 8370241;
+
+			}
+		}
+
+		if (game_exp >= 8370241){
+			if (game_exp < 9207265){
+
+				game_level = 96;
+				game_max_exp = 9207265;
+
+			}
+		}
+
+		if (game_exp >= 9207265){
+			if (game_exp < 10117992){
+
+				game_level = 97;
+				game_max_exp = 10117992;
+
+			}
+		}
+
+		if (game_exp >= 10117992){
+			if (game_exp < 11129791){
+
+				game_level = 98;
+				game_max_exp = 11129791;
+
+			}
+		}
+
+		if (game_exp >= 11129791){
+			if (game_exp < 12242770){
+
+				game_level = 99;
+				game_max_exp = 12242770;
+
+			}
+		}
+
+		if (game_exp >= 12242770){
+
+				game_level = 100;
+				game_max_exp = game_exp;
+
+		}
+
+
+
+
+		if (LB==0){
+
+
+		AuPath("TEXTURE/hud/BeatUp/card"); //path
+		AuPos(560,540);
+		AuDDS("card");
+
+		//AuPath("TEXTURE/hud/BeatUp/card"); //path
+		//AuPos(708,557);
+		//AuDDS("cardbar");
+
+		//AuPath("TEXTURE/hud/BeatUp/card"); //path
+		//AuPos(708,575);
+		//AuDDS("cardbar");
+
+				if (!(rank_point >= 0 && rank_point <= 9999))
+		{
+
+				AuPos(570,542);
+				AuDraw("[ %s ] %s | RP: %d", rankforB,OFS_CHARACTER_NAME,rank_point);
+
+		}
+
+
+		if (rank_point >= -100)
+		{
+			if (rank_point <= 100)
+			{
+
+				AuPos(570,542);
+				AuDraw("[ %s ] %s | RP: %d", rankforB,OFS_CHARACTER_NAME,rank_point);
+
+			}
+		}
+
+		if (rank_point >= 101)
+		{
+			if (rank_point <= 200)
+			{
+
+				AuPos(570,542);
+				AuDraw("[ %s ] %s | RP: %d", rankforS,OFS_CHARACTER_NAME,rank_point);
+
+			}
+		}
+
+		if (rank_point >= 201)
+		{
+			if (rank_point <= 300)
+			{
+
+				AuPos(570,542);
+				AuDraw("[ %s ] %s | RP: %d", rankforG,OFS_CHARACTER_NAME,rank_point);
+
+			}
+		}
+
+		if (rank_point >= 301)
+		{
+			if (rank_point <= 400)
+			{
+
+				AuPos(570,542);
+				AuDraw("[ %s ] %s | RP: %d", rankforP,OFS_CHARACTER_NAME,rank_point);
+
+			}
+		}
+
+		if (rank_point >= 401)
+		{
+			if (rank_point <= 500)
+			{
+
+				AuPos(570,542);
+				AuDraw("[ %s ] %s | RP: %d", rankforD,OFS_CHARACTER_NAME,rank_point);
+
+			}
+		}
+
+		if (rank_point >= 501)
+		{
+			if (rank_point <= 600)
+			{
+
+				AuPos(570,542);
+				AuDraw("[ %s ] %s | RP: %d", rankforC,OFS_CHARACTER_NAME,rank_point);
+
+			}
+		}
+
+		if (rank_point >= 601)
+		{
+			if (rank_point <= 99999)
+			{
+
+				AuPos(570,542);
+				AuDraw("[ %s ] %s | RP: %d", rankforC,OFS_CHARACTER_NAME,rank_point);
+
+			}
+		}
+
+
+
+
+
+
+
+
+	//	if (total_p_perfect2 >= 98){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_ex");
+
+	//	}
+
+	//	if (total_p_perfect2 >=95){
+	//		if (total_p_perfect2 <98){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_s3");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=92){
+	//		if (total_p_perfect2 <95){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_s2");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=88){
+	//		if (total_p_perfect2 <92){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_s1");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=84){
+	//		if (total_p_perfect2 <88){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_a3");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=80){
+	//		if (total_p_perfect2 <84){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_a2");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=75){
+	//		if (total_p_perfect2 <80){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_a1");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=65){
+	//		if (total_p_perfect2 <75){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_b3");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=55){
+	//		if (total_p_perfect2 <65){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_b2");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=45){
+	//		if (total_p_perfect2 <55){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_b1");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=35){
+	//		if (total_p_perfect2 <45){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_c3");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=25){
+	//		if (total_p_perfect2 <35){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_c2");
+
+	//		}
+	//	}
+
+	//	if (total_p_perfect2 >=0){
+	//		if (total_p_perfect2 <25){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,559);
+	//	AuDDS("test_c3");
+
+	//		}
+	//	}
+
+
+
+
+	//	if (total_combo2 >= 98){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_ex");
+
+	//	}
+
+	//	if (total_combo2 >=95){
+	//		if (total_combo2 <98){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_s3");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=92){
+	//		if (total_combo2 <95){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_s2");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=88){
+	//		if (total_combo2 <92){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_s1");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=84){
+	//		if (total_combo2 <88){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_a3");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=80){
+	//		if (total_combo2 <84){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_a2");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=75){
+	//		if (total_combo2 <80){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_a1");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=65){
+	//		if (total_combo2 <75){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_b3");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=55){
+	//		if (total_combo2 <65){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_b2");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=45){
+	//		if (total_combo2 <55){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_b1");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=35){
+	//		if (total_combo2 <45){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_c3");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=25){
+	//		if (total_combo2 <35){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_c2");
+
+	//		}
+	//	}
+
+	//	if (total_combo2 >=0){
+	//		if (total_combo2 <25){
+
+	//	AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	AuPos(820,577);
+	//	AuDDS("test_c3");
+
+	//		}
+	//	}
+
+
+
+
+
+
+	//	//AuPath("TEXTURE/hud/BeatUp/card"); //path
+	//	//AuPos(820,577);
+	//	//AuDDS("test_c1");
+
+		if (game_level < 100){
+
+		AuPos(570,588);
+		AuDraw("%s - LV.%d - [%.0f/%d]", OFS_CHARACTER_NAME, game_level, game_exp, game_max_exp);
+
+		}
+
+		if (game_level >= 100){
+
+		AuPos(570,588);
+		AuDraw("%s - LV.100 - [MAX/MAX]", OFS_CHARACTER_NAME);
+
+		}
+
+		//AuPos(570,553);
+		//AuDraw("P: %.2f%%", total_p_perfect2);
+
+		//AuPos(570,575);
+		//AuDraw("C: %.2f%%", total_combo2);
+
+		AuPos(570,562);
+		//AuDraw("CARD_ID: %s", userName);
+		AuDraw("KEY_ID: %s", random_key);
+
+		}
+
+		}
+
+
+
+
+
+	//BUPatchMain->CalculatePingPerSecond();
+
+	if (*(DWORD *)OFS_ROOM_STATUS == NOLOGIN){
+
+		AuPos(715+g_fixwinsize_x,751);
+		AuDraw("account no login, World Patch activator_cert.key fail.");
+
+	}
+
+	if (*(DWORD *)OFS_ROOM_STATUS == NOLOGIN){
+
+
+		if (ping_number == 0){
+		AuPos(5-g_fixwinsize_x, 732);
+		AuDraw("[%s] | [Server Syncing...]",ping_checking);
+		AuPos(5-g_fixwinsize_x, 748);
+		AuDraw("Ping : %d ms [Server: %s]",ping_sibu,ping_address);
+		}else{
+		AuPos(5-g_fixwinsize_x, 748);
+		AuDraw("Ping : %d ms [Server: %s]",ping_sibu,ping_address);
+		}
+
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(10, 749);
+		//AuDDS("wifilogo");
+
+		//if (ping_sibu >= 0){
+		//if (ping_sibu < 15){
+
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 749);
+		//AuDDS("wifi4");
+		//	}
+		//}
+
+		//if (ping_sibu >= 15){
+		//	if (ping_sibu < 40){
+
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 749);
+		//AuDDS("wifi3");
+		//	}
+		//}
+
+		//if (ping_sibu >= 40){
+		//	if (ping_sibu < 70){
+
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 749);
+		//AuDDS("wifi2");
+		//	}
+		//}
+
+		//if (ping_sibu >= 70){
+		//	if (ping_sibu < 200){
+
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 749);
+		//AuDDS("wifi1");
+		//	}
+		//}
+
+		//if (ping_sibu >= 200){
+
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 749);
+		//AuDDS("wifi0");
+		//}
+
+		//if (ping_sibu < 0){
+
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(30, 749);
+		//AuDDS("wifi0");
+		//}
+
+	
+	}
+
+
+				if (*(DWORD *)OFS_ROOM_STATUS == OUTROOM){
+
+		if (ping_number == 0){
+		AuPos(50-g_fixwinsize_x, 732);
+		AuDraw("[%s] | [Server Syncing...]",ping_checking);
+		AuPos(50-g_fixwinsize_x, 748);
+		AuDraw("Ping : %d ms [Server: %s]",ping_sibu,ping_address);
+		}else{
+		AuPos(50-g_fixwinsize_x, 748);
+		AuDraw("Ping : %d ms [Server: %s]",ping_sibu,ping_address);
+		}
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(10-g_fixwinsize_x, 749);
+		AuDDS("wifilogo");
+
+		if (ping_sibu >= 0){
+		if (ping_sibu < 15){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(30-g_fixwinsize_x, 749);
+		AuDDS("wifi4");
+			}
+		}
+
+		if (ping_sibu >= 15){
+			if (ping_sibu < 40){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(30-g_fixwinsize_x, 749);
+		AuDDS("wifi3");
+			}
+		}
+
+		if (ping_sibu >= 40){
+			if (ping_sibu < 70){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(30-g_fixwinsize_x, 749);
+		AuDDS("wifi2");
+			}
+		}
+
+		if (ping_sibu >= 70){
+			if (ping_sibu < 200){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(30-g_fixwinsize_x, 749);
+		AuDDS("wifi1");
+			}
+		}
+
+		if (ping_sibu >= 200){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(30-g_fixwinsize_x, 749);
+		AuDDS("wifi0");
+		}
+
+		if (ping_sibu < 0){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(30-g_fixwinsize_x, 749);
+		AuDDS("wifi0");
+		}
+
+	}
+				
+
+
+
+
+
+
+
+				if (*(DWORD *)OFS_ROOM_STATUS == INROOM){
+
+		if (ping_number == 0){
+		AuPos(160, 733);
+		AuDraw("[%s] | [Server Syncing...]",ping_checking);
+		AuPos(160, 749);
+		AuDraw("Ping : %d ms [Server: %s]",ping_sibu,ping_address);
+		}else{
+		AuPos(160, 749);
+		AuDraw("Ping : %d ms [Server: %s]",ping_sibu,ping_address);
+		}
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(120, 750);
+		AuDDS("wifilogo");
+
+		if (ping_sibu >= 0){
+		if (ping_sibu < 15){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(140, 749);
+		AuDDS("wifi4");
+			}
+		}
+
+		if (ping_sibu >= 15){
+			if (ping_sibu < 40){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(140, 749);
+		AuDDS("wifi3");
+			}
+		}
+
+		if (ping_sibu >= 40){
+			if (ping_sibu < 70){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(140, 749);
+		AuDDS("wifi2");
+			}
+		}
+
+		if (ping_sibu >= 70){
+			if (ping_sibu < 200){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(140, 749);
+		AuDDS("wifi1");
+			}
+		}
+
+		if (ping_sibu >= 200){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(140, 749);
+		AuDDS("wifi0");
+		}
+
+		if (ping_sibu < 0){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(140, 749);
+		AuDDS("wifi0");
+		}
+
+	}
+
+				if (*(DWORD *)OFS_ROOM_STATUS == PLAYROOM){
+
+		if (*(DWORD*)OFS_CTRLTAB != 2){
+
+				if (ping_number == 0){
+		AuPos(290-g_fixwinsize_x, 732);
+		AuDraw("[%s] | [Server Syncing...]",ping_checking);
+		AuPos(290-g_fixwinsize_x, 748);
+		AuDraw("Ping : %d ms [Server: %s]",ping_sibu,ping_address);
+		}else{
+		AuPos(290-g_fixwinsize_x, 748);
+		AuDraw("Ping : %d ms [Server: %s]",ping_sibu,ping_address);
+		}
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(250-g_fixwinsize_x, 749);
+		AuDDS("wifilogo");
+
+		if (ping_sibu >= 0){
+		if (ping_sibu < 15){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(270-g_fixwinsize_x, 748);
+		AuDDS("wifi4");
+			}
+		}
+
+		if (ping_sibu >= 15){
+		if (ping_sibu < 40){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(270-g_fixwinsize_x, 748);
+		AuDDS("wifi3");
+			}
+		}
+
+		if (ping_sibu >= 40){
+			if (ping_sibu < 70){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(270-g_fixwinsize_x, 748);
+		AuDDS("wifi2");
+			}
+		}
+
+		if (ping_sibu >= 70){
+			if (ping_sibu < 200){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(270-g_fixwinsize_x, 748);
+		AuDDS("wifi1");
+			}
+		}
+
+		if (ping_sibu >= 200){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(270-g_fixwinsize_x, 748);
+		AuDDS("wifi0");
+		}
+
+		if (ping_sibu < 0){
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(270-g_fixwinsize_x, 748);
+		AuDDS("wifi0");
+		}
+
+
+
+		}
+
+	}
+
+
+
+
+
+
+
+	if (*(DWORD*)OFS_ROOM_STATUS == OUTROOM){
+
+		AuPath("TEXTURE/hud/BeatUp"); //path
+		AuPos(760, 55);
+		//AuDDS("logo_bakevn01"); //logo bake patch
+		AuDDS("logo_bakevn_ex"); //logo bake patch
+
+		//AuPos(835,750);
+		//AuDraw("S/N: 00EBEE8347.EX.WP0023.VN"); //WP0023
+
+		//generateRandomKey();
+
+		AuPos(835+g_fixwinsize_x, 750);
+		AuDraw("S/N: EX.WP0032.VN.%s",random_key);
+
+
+		AuPath("TEXTURE/hud/BeatUp/wifi");
+		AuPos(817+g_fixwinsize_x,750);
+		AuDDS("key");
+
+		BUPatchMain->RAMFREEDisplayName((char*) ramfreeText);
+
+		AuPos(400,749);
+		AuDraw("%s", ramfreeText);
+
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(366,750);
+		//AuDDS("ram");
+
+		//	if (checkStatus == 1){
+		//AuPath("TEXTURE/hud/BeatUp/live");
+		//AuPos(22, 710);
+		//AuDDS("live");
+
+		//AuPos(52, 709);
+		//AuDraw("LIVE Streaming");
+
+		//	}
+		//
+
+
+		//AuPath("TEXTURE/hud/BeatUp/wifi");
+		//AuPos(20, 730);
+		//AuDDS("pplus");
+
+		//AuPos(40, 729);
+		//AuDraw("P-Plus [OFF]");
+
+
+
+
+
+				/*	AuPos(60, 749);
+					AuDraw("Ping : %.f ms [%s]",test_speed,nation);
+
+				AuPath("TEXTURE/hud/BeatUp/wifi");
+				AuPos(20, 750);
+				AuDDS("wifilogo");
+
+				if (test_speed >= 0){
+					if (test_speed < 20){
+
+				AuPath("TEXTURE/hud/BeatUp/wifi");
+				AuPos(40, 749);
+				AuDDS("wifi4");
+					}
+				}
+
+				if (test_speed >= 20){
+					if (test_speed < 40){
+
+				AuPath("TEXTURE/hud/BeatUp/wifi");
+				AuPos(40, 749);
+				AuDDS("wifi3");
+					}
+				}
+
+				if (test_speed >= 40){
+					if (test_speed < 70){
+
+				AuPath("TEXTURE/hud/BeatUp/wifi");
+				AuPos(40, 749);
+				AuDDS("wifi2");
+					}
+				}
+
+				if (test_speed >= 70){
+					if (test_speed < 200){
+
+				AuPath("TEXTURE/hud/BeatUp/wifi");
+				AuPos(40, 749);
+				AuDDS("wifi1");
+					}
+				}
+
+				if (test_speed >= 200){
+
+				AuPath("TEXTURE/hud/BeatUp/wifi");
+				AuPos(40, 749);
+				AuDDS("wifi0");
+				}*/
+
+	}
+
+
+
+
+
+
+			if (world_check == 0){
+
+		if (*(DWORD *)OFS_ROOM_STATUS == OUTROOM){
+
+		AuPath("TEXTURE/hud/BeatUp/world");
+		AuPos(0, 0);
+		AuDDS("world2026");
+
+		AuPos(700,688);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)click [Shift] to close Notice"); //999
+
+		AuPath("TEXTURE/hud/BeatUp"); //path
+		AuPos(700,720);
+		AuDDS("shiftoff2");
+
+		WORD SHIFTKEYNOTICE = GetAsyncKeyState(VK_SHIFT);
+		if ((SHIFTKEYNOTICE & 0x8000) == 0x8000){ //chance
+			if (SHIFTKEYPRESSNOTICE){
+				//chanceNum==7?chanceNum=0:chanceNum++;
+				//bShowInfo==1?bShowInfo=0:bShowInfo++;
+				world_check = 1;
+				SHIFTKEYPRESSNOTICE = false;
+			}
+		}else{
+			SHIFTKEYPRESSNOTICE = true;
+		}
+	}
+
+		}
+
+
+
+
+
+
+
+
+	
+	if (*(DWORD*)OFS_ROOM_STATUS == PLAYROOM)
+	{
+
+		//LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
+		//HWND hMainWnd;
+
+		//LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+
+		//ProcessRawInput(lParam);  // 只写参数名
+
+		//sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
+
+		//BUPatchMain->processEvents(window);
+
+		//BUPatchMain->handleSingleKey();
+
+		//BUPatchMain->runInputLoop();
+
+	if (sendwtfvkvk){
+
+		//if (perfect >= 1){
+
+				(total_round += 1);
+
+				LadderNotice = 0;
+
+				realScore = 0;
+
+				score = 0;
+
+			
+
+				//new_sendladder = 1;
+				//(total_p_perfect2 = 0);
+				//(total_combo2 = 0);
+				//(total_judg2 = 0);
+
+				//BUPatchMain->sendtotalroundpoint_in_background((char *)OFS_CHARACTER_NAME);
+
+				/*if (rank_point >= 0){
+					if (rank_point <100){
+
+				(disconnect_point = 7);
+
+				BUPatchMain->senddisconnectpoint_in_background((char *)OFS_CHARACTER_NAME);
+
+				}
+				}
+
+				if (rank_point >= 101){
+					if (rank_point <200){
+
+				(disconnect_point = 10);
+
+				BUPatchMain->senddisconnectpoint_in_background((char *)OFS_CHARACTER_NAME);
+
+				}
+				}
+
+				if (rank_point >= 201){
+					if (rank_point <300){
+
+				(disconnect_point = 15);
+
+				BUPatchMain->senddisconnectpoint_in_background((char *)OFS_CHARACTER_NAME);
+
+				}
+				}
+
+				if (rank_point >= 301){
+					if (rank_point <400){
+
+				(disconnect_point = 25);
+
+				BUPatchMain->senddisconnectpoint_in_background((char *)OFS_CHARACTER_NAME);
+
+				}
+				}
+
+				if (rank_point >= 401){
+					if (rank_point <500){
+
+				(disconnect_point = 30);
+
+				BUPatchMain->senddisconnectpoint_in_background((char *)OFS_CHARACTER_NAME);
+
+				}
+				}
+
+				if (rank_point >= 501){
+
+				(disconnect_point = 40);
+
+				BUPatchMain->senddisconnectpoint_in_background((char *)OFS_CHARACTER_NAME);
+
+				}*/
+
+		}
+
+				sendwtfvkvk=false;
+
+			//}
+		}else{
+			sendwtfvkvk=true;
+		}
+
+
+
+	
+
+	if (*(DWORD*)OFS_ROOM_STATUS == PLAYROOM)
+	{
+
+		//AuPos(300,300);
+		//AuDraw("%d %d",test_score,test_score2);
+
+
+
+
+
+		if (*(DWORD*)OFS_CTRLTAB != 2){
+
+		//if (bShowInfo == 1) {
+
+		//	if (guimode == 0){
+
+		//BUPatchMain->DrawStatic(5, 25);
+        AuPath("TEXTURE/hud/BeatUp"); //path
+		AuPos(810+g_fixwinsize_x, 690);
+		//AuDDS("logo_bakevn01"); //logo bake patch
+		AuDDS("logo_bakevn_ex"); //logo bake patch
+
+		}
+
+		//	}
+
+		//}
+
+		//if (bShowInfo == 1) {
+
+		////BUPatchMain->DrawStatic(5, 25);
+  //      AuPath("TEXTURE/hud/BeatUp"); //path
+		//AuPos(800, 690);
+		//AuDDS("logo_bakevn02"); //logo bake patch
+
+		//}
+
+
+		// display combo beat
+
+		//if (bShowInfo == 0){
+
+
+		//if (bShowInfo == 0) {
+
+		// combobar test
+
+		//AuPath("TEXTURE/hud/BeatUp/combobar"); //path
+		//AuPos(359, 738);
+		//AuDDS("0a"); //logo bake patch
+
+		
+
+
+
+		//if (iGetCombo >= 100){ //999
+		//	if (iGetCombo < 400){
+
+		//AuPos(355,717);
+		//AuDraw("#SIZE(20)#OUT(1)#FONT(Verdana)Basic - Yellow Beat [100Combo]");
+		//	}
+		//}
+
+		//if (iGetCombo >= 400){
+		//	if (iGetCombo < 700){
+
+		//AuPos(353,717);
+		//AuDraw("#SIZE(20)#OUT(1)#FONT(Verdana)Lightning - Blue Beat [400Combo]");
+		//	}
+		//}
+
+		//if (iGetCombo >= 700){
+		//	if (iGetCombo < 1000){
+
+		//AuPos(355,717);
+		//AuDraw("#SIZE(20)#OUT(1)#FONT(Verdana)Fantasy - Red Beat [700Combo]");
+		//	}
+		//}
+
+		//if (iGetCombo >= 1000){
+		//	if (iGetCombo < 1500){
+
+		//AuPos(354,717);
+		//AuDraw("#SIZE(20)#OUT(1)#FONT(Verdana)Extreme - Sky Beat [1000Combo]");
+		//	}
+		//}
+
+		//if (iGetCombo >= 1500){
+		//	if (iGetCombo < 2000){
+
+		//AuPos(352,717);
+		//AuDraw("#SIZE(20)#OUT(1)#FONT(Verdana)Network - Rainbow Beat [1500Combo]");
+		//	}
+		//}
+
+		//if (iGetCombo >= 2000){
+		//	if (iGetCombo < 2500){
+
+		//AuPos(355,717);
+		//AuDraw("#SIZE(20)#OUT(1)#FONT(Verdana)Death - Dark Beat [2000Combo]");
+		//	}
+		//}
+
+		//if (iGetCombo >= 2500){
+		//	if (iGetCombo < 3000){
+
+		//AuPos(355,717);
+		//AuDraw("#SIZE(20)#OUT(1)#FONT(Verdana)Dream - Void Beat [2500Combo]");
+		//	}
+		//}
+
+		//if (iGetCombo >= 3000){
+		//	if (iGetCombo < 9999){
+
+		//AuPos(354,717);
+		//AuDraw("#SIZE(20)#OUT(1)#FONT(Verdana)World - Break Beat [3000Combo]");
+		//	}
+		//}
+
+		//}
+
+		//}
+
+
+
+		// for tier
+		
+		if (bShowInfo == 1){
+
+			if (guimode != 2){
+
+
+		AuPos(210-g_fixwinsize_x,156);
+		AuDraw(COUNT_PERCENT_TIER, p_perfect); //999
+
+		AuPos(210-g_fixwinsize_x,182);
+		AuDraw(COUNT_SIBU_COMBO_TIER, p_combo);//MaxComboPercent
+
+		AuPos(210-g_fixwinsize_x,208);
+		AuDraw(COUNT_SCORE_B, judgement_score_old);
+
+		AuPos(210-g_fixwinsize_x,234);
+		AuDraw(COUNT_SCORE_B, focus);
+
+		AuPos(210-g_fixwinsize_x,260);
+		AuDraw(COUNT_SCORE_B, endurance);
+
+		AuPos(210-g_fixwinsize_x,286);
+		AuDraw(COUNT_SIBU_123, judgement_score); // is real!!
+
+		AuPos(210-g_fixwinsize_x,143);
+		AuDraw("[Perfect]");
+
+		AuPos(210-g_fixwinsize_x,169);
+		AuDraw("[MaxCombo]");
+
+		AuPos(210-g_fixwinsize_x,195);
+		AuDraw("[Overall]");
+
+		AuPos(210-g_fixwinsize_x,221);
+		AuDraw("[Focus]");
+
+		AuPos(210-g_fixwinsize_x,247);
+		AuDraw("[Endurance]");
+
+		AuPos(210-g_fixwinsize_x,273);
+		AuDraw("[Real_JudgScore]");
+
+		if (judgement_score >= 99)
+		{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[MM]");
+		}else{
+
+		if (judgement_score >= 97)
+		{
+			if (judgement_score < 99)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[EX]");
+			}
+		}
+
+		if (judgement_score >= 94)
+		{
+			if (judgement_score < 97)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[S+]");
+			}
+		}
+
+		if (judgement_score >= 91)
+		{
+			if (judgement_score < 94)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[S]");
+			}
+		}
+
+		if (judgement_score >= 88)
+		{
+			if (judgement_score < 91)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[S-]");
+			}
+		}
+
+		if (judgement_score >= 84)
+		{
+			if (judgement_score < 88)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[A+]");
+			}
+		}
+
+		if (judgement_score >= 80)
+		{
+			if (judgement_score < 84)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[A]");
+			}
+		}
+
+		if (judgement_score >= 75)
+		{
+			if (judgement_score < 80)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[A-]");
+			}
+		}
+
+		if (judgement_score >= 65)
+		{
+			if (judgement_score < 75)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[B+]");
+			}
+		}
+
+		if (judgement_score >= 55)
+		{
+			if (judgement_score < 65)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[B]");
+			}
+		}
+
+		if (judgement_score >= 45)
+		{
+			if (judgement_score < 55)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[B-]");
+			}
+		}
+
+		if (judgement_score >= 35)
+		{
+			if (judgement_score < 45)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[C+]");
+			}
+		}
+
+		if (judgement_score >= 25)
+		{
+			if (judgement_score < 35)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[C]");
+			}
+		}
+
+		if (judgement_score >= 0)
+		{
+			if (judgement_score < 25)
+			{
+		AuPos(208-g_fixwinsize_x,300);
+		AuDraw("#FONT(Verdana)#SIZE(25)#OUT(1)#EMOTICON(0)#BOLD(1)[C-]");
+			}
+		}
+
+		}
+
+		}
+
+		}
+
+		//AuDraw(COUNT_SCORE_B, ((((float)MaxCombo/((float)perfect + (float)great + (float)cool + (float)bad + (float)miss))*100)+(((float)perfect/((float)perfect + (float)great + (float)cool + (float)bad + (float)miss))*100))/2);
+
+		//}
+
+
+		BUPatchMain->DrawStatic(5, 25);
+
+		//if (*(DWORD *)OFS_GAME_TYPE == BEATUP6){
+
+			//BUPatchMain->ChanceDDS();
+			if (prefetchdds){
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("text800");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("text1200");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("text1600");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("text2200");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("text2600");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("text3000");
+
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("space800");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("space1200");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("space1600");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("space2200");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("space2600");
+				AuPath("TEXTURE/hud/BeatUp"); //path
+				AuPos(1024, 1024);
+				AuDDS("space3000");
+				prefetchdds = false;
+			//}
+		}
+
+
+	}
+}
